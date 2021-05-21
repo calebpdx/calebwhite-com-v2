@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 // Required Components
 import Socials from '../components/Socials'
+import Banner from '../components/Banner'
 
 // Utilities Used
 import { respondTo } from '../utils/_respondTo'
@@ -60,22 +61,6 @@ const Title = styled.h1`
   `}
 `
 
-const Banner = styled.section`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1rem;
-	font-weight: bold;
-	color: #000;
-	width: 100%;
-	height: 30px;
-	background-color: ${({ theme }) => theme.colors.primary};
-
-	${respondTo.sm`
-    height: 40px;
-    font-size: 1.25rem;
-  `}
-`
 export default function Home() {
 	return (
 		<>
