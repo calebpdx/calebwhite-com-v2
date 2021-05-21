@@ -1,4 +1,6 @@
+// Dependencies
 import React from 'react'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faGithub,
@@ -6,9 +8,10 @@ import {
 	faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
-import styled from 'styled-components'
+// Utilities Used
+import { respondTo } from '../utils/_respondTo'
 
-const Social = styled.ul`
+const Container = styled.ul`
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
@@ -16,10 +19,14 @@ const Social = styled.ul`
 	justify-content: center;
 
 	li {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		${respondTo.sm`
+            font-size: 1.5rem;
+        `}
 	}
 
 	li:not(:last-child) {
@@ -27,17 +34,17 @@ const Social = styled.ul`
 	}
 
 	a {
-		color: ${({ theme }) => theme.colors.powderWhite};
+		color: ${({ theme }) => theme.colors.secondary};
 	}
 
 	a:hover {
-		color: ${({ theme }) => theme.colors.persianGreen};
+		color: ${({ theme }) => theme.colors.primary};
 	}
 `
 
 const Socials = () => {
 	return (
-		<Social>
+		<Container>
 			<li>
 				<a href='https://www.twitter.com/goldfinger'>
 					<FontAwesomeIcon icon={faTwitter} size='lg' />
@@ -53,7 +60,7 @@ const Socials = () => {
 					<FontAwesomeIcon icon={faLinkedin} size='lg' />
 				</a>
 			</li>
-		</Social>
+		</Container>
 	)
 }
 

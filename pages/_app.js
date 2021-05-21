@@ -18,9 +18,9 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
 	colors: {
+		primary: '#06B49A',
+		secondary: '#AFDBD2',
 		powderWhite: '#FFFDF9',
-		persianGreen: '#06B49A',
-		lightBlue: '#AFDBD2',
 		onyx: '#36313D',
 	},
 	fonts: ['Helvetica', 'sans-serif', 'Roboto'],

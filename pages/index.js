@@ -1,13 +1,17 @@
+// Dependencies
 import Head from 'next/head'
 import Image from 'next/image'
 import Moment from 'react-moment'
-
 import styled from 'styled-components'
 
+// Required Components
 import Socials from '../components/Socials'
 
+// Utilities Used
+import { respondTo } from '../utils/_respondTo'
+
 const Wrapper = styled.div`
-	color: ${({ theme }) => theme.colors.lightBlue};
+	color: ${({ theme }) => theme.colors.secondary};
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
@@ -21,16 +25,21 @@ const Intro = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.25rem;
+	font-size: 0.9rem;
+
+	${respondTo.sm`
+    font-size: 1.25rem;
+  `}
 `
 const Para = styled.p`
+	color: ${({ theme }) => theme.colors.primary};
 	padding: 0;
 	margin: 0;
 	text-align: center;
 `
 
 const Grouped = styled.div`
-	color: ${({ theme }) => theme.colors.persianGreen};
+	color: ${({ theme }) => theme.colors.primary};
 	font-weight: bold;
 	padding-bottom: 50px;
 `
@@ -57,15 +66,15 @@ export default function Home() {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+
 			<Wrapper>
 				<Intro>
-					<Grouped>
-						<Title>Hi, I'm Caleb.</Title>
-						<Para>A Frontend Engineer from Portland, OR</Para>
-					</Grouped>
-					<Para>
+					<Title>Hey, I'm Caleb.</Title>
+					<Para>I'm a Frontend Engineer from Portland, OR</Para>
+
+					{/* <Para>
 						New website coming very soon! (Late May/Early June 2021)
-					</Para>
+					</Para> */}
 					<Socials />
 				</Intro>
 
