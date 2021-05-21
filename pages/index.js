@@ -25,17 +25,18 @@ const Intro = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 0.9rem;
-
-	${respondTo.sm`
-    font-size: 1.25rem;
-  `}
+	font-size: 1rem;
 `
 const Para = styled.p`
 	color: ${({ theme }) => theme.colors.primary};
 	padding: 0;
 	margin: 0;
 	text-align: center;
+	font-size: 1.15rem;
+
+	${respondTo.sm`
+    font-size: 1.5rem;
+  `}
 `
 
 const Grouped = styled.div`
@@ -49,12 +50,32 @@ const Footer = styled.section`
 	font-size: 1rem;
 `
 const Title = styled.h1`
-	font-size: 3.5em;
+	font-size: 2.75em;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
 	color: ${({ theme }) => theme.colors.powderWhite};
+
+	${respondTo.sm`
+    font-size: 3.75rem;
+  `}
 `
 
+const Banner = styled.section`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #000;
+	width: 100%;
+	height: 30px;
+	background-color: ${({ theme }) => theme.colors.primary};
+
+	${respondTo.sm`
+    height: 40px;
+    font-size: 1.25rem;
+  `}
+`
 export default function Home() {
 	return (
 		<>
@@ -68,6 +89,7 @@ export default function Home() {
 			</Head>
 
 			<Wrapper>
+				<Banner>New website launching Late May/Early June 2021</Banner>
 				<Intro>
 					<Title>Hey, I'm Caleb.</Title>
 					<Para>I'm a Frontend Engineer from Portland, OR</Para>

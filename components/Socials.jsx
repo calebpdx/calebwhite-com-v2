@@ -16,6 +16,7 @@ const Container = styled.ul`
 	flex-direction: row;
 	list-style-type: none;
 	margin: 2rem 0;
+	padding: 0;
 	justify-content: center;
 
 	li {
