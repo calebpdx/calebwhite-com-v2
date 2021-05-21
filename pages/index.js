@@ -1,14 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Moment from 'react-moment'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-	faGithub,
-	faLinkedin,
-	faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
 
 import styled from 'styled-components'
+
+import Socials from '../components/Socials'
 
 const Wrapper = styled.div`
 	color: ${({ theme }) => theme.colors.lightBlue};
@@ -41,40 +37,13 @@ const Grouped = styled.div`
 
 const Footer = styled.section`
 	color: ${({ theme }) => theme.colors.onyx};
-	font-size: fontSizes.xs;
+	font-size: 1rem;
 `
 const Title = styled.h1`
 	font-size: 3.5em;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
 	color: ${({ theme }) => theme.colors.powderWhite};
-`
-
-const Social = styled.ul`
-	display: flex;
-	flex-direction: row;
-	list-style-type: none;
-	margin: 2rem 0;
-	justify-content: center;
-
-	li {
-		font-size: 1.5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	li:not(:last-child) {
-		margin-right: 30px;
-	}
-
-	a {
-		color: ${({ theme }) => theme.colors.powderWhite};
-	}
-
-	a:hover {
-		color: ${({ theme }) => theme.colors.persianGreen};
-	}
 `
 
 export default function Home() {
@@ -97,23 +66,7 @@ export default function Home() {
 					<Para>
 						New website coming very soon! (Late May/Early June 2021)
 					</Para>
-					<Social>
-						<li>
-							<a href='https://www.twitter.com/goldfinger'>
-								<FontAwesomeIcon icon={faTwitter} size='lg' />
-							</a>
-						</li>
-						<li>
-							<a href='https://www.github.com/cloroxo'>
-								<FontAwesomeIcon icon={faGithub} size='lg' />
-							</a>
-						</li>
-						<li>
-							<a href='https://www.linkedin.com/in/calebawhite'>
-								<FontAwesomeIcon icon={faLinkedin} size='lg' />
-							</a>
-						</li>
-					</Social>
+					<Socials />
 				</Intro>
 
 				<Footer>
