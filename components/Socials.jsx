@@ -31,7 +31,7 @@ const Container = styled.ul`
 	}
 
 	li:not(:last-child) {
-		margin-right: 30px;
+		margin-right: 20px;
 	}
 
 	a {
@@ -39,6 +39,7 @@ const Container = styled.ul`
 	}
 
 	a:hover {
+		transition: 0.25s ease-in;
 		color: ${({ theme }) => theme.colors.primary};
 	}
 `

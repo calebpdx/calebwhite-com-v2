@@ -10,7 +10,7 @@ const Container = styled.section`
 	justify-content: center;
 	align-items: center;
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: 600;
 	color: #000;
 	width: 100%;
 	height: 30px;
@@ -18,7 +18,7 @@ const Container = styled.section`
 
 	${respondTo.sm`
     height: 40px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   `}
 `
 

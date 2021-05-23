@@ -1,4 +1,6 @@
 import React from 'react'
+import '../styles/_fontStyles.css'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
@@ -7,9 +9,11 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import normalize from 'normalize.css/normalize.css'
 
 const GlobalStyle = createGlobalStyle`
+
   body {
     background-color: #020202;
-  	font-family: Arial, Helvetica, sans-serif;
+  	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
+    font-weight: 300;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

@@ -21,22 +21,30 @@ const Wrapper = styled.div`
 `
 
 const Intro = styled.main`
+	width: 75%;
+	padding: 0;
+	margin: 0;
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	font-size: 1rem;
+
+	${respondTo.lg`
+    width: 60%;
+  `}
 `
 const Para = styled.p`
+	font-family: 'Noto Sans JP', sans-serif;
 	color: ${({ theme }) => theme.colors.primary};
 	padding: 0;
 	margin: 0;
-	text-align: center;
+	text-align: left;
 	font-size: 1.15rem;
 
 	${respondTo.sm`
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   `}
 `
 
@@ -51,13 +59,19 @@ const Footer = styled.section`
 	font-size: 1rem;
 `
 const Title = styled.h1`
+	font-family: 'Poppins', sans-serif;
 	font-size: 2.75em;
+	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
 	color: ${({ theme }) => theme.colors.powderWhite};
 
+	strong {
+		font-weight: 600;
+	}
+
 	${respondTo.sm`
-    font-size: 3.75rem;
+    font-size: 4.75rem;
   `}
 `
 
@@ -76,12 +90,10 @@ export default function Home() {
 			<Wrapper>
 				<Banner>New website launching Late May/Early June 2021</Banner>
 				<Intro>
-					<Title>Hey, I'm Caleb.</Title>
-					<Para>I'm a Frontend Engineer from Portland, OR</Para>
-
-					{/* <Para>
-						New website coming very soon! (Late May/Early June 2021)
-					</Para> */}
+					<Title>
+						Hey, I'm <strong>Caleb</strong>.
+					</Title>
+					<Para>I'm a Portland based Frontend Engineer.</Para>
 					<Socials />
 				</Intro>
 
