@@ -90,7 +90,6 @@ export default function Home() {
 			</Head>
 
 			<ContentWrapper>
-				<Banner>New website launching Late May/Early June 2021</Banner>
 				<Navigation />
 				<Intro>
 					<SiteTitle>
