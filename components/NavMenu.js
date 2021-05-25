@@ -6,9 +6,9 @@ import { respondTo } from '../utils/_respondTo'
 
 const Menu = styled.ul`
 	display: flex;
-	color: ${theme.colors.wolfGray};
+	color: ${({ theme }) => theme.colors.wolfGray};
 	font-size: ${({ theme }) => theme.fontSizes.sm};
-	font-weight: 400;
+	font-weight: 600;
 	align-items: flex-end;
 	justify-content: center;
 	flex-direction: row;
@@ -26,8 +26,8 @@ const Menu = styled.ul`
 const NavMenu = () => {
 	return (
 		<Menu>
-			<li>home</li>
 			<li>about</li>
+			<li>cv</li>
 			<li>projects</li>
 			<li>contact</li>
 		</Menu>
