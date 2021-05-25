@@ -1,5 +1,5 @@
 // Dependencies
-import React, { Children } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 // Utilities Used
@@ -11,10 +11,10 @@ const Container = styled.section`
 	align-items: center;
 	font-size: 1rem;
 	font-weight: 600;
-	color: #000;
+	color: ${({ theme }) => theme.colors.bg};
 	width: 100%;
 	height: 30px;
-	background-color: ${({ theme }) => theme.colors.primary};
+	background-color: ${({ theme }) => theme.colors.secondary};
 
 	${respondTo.sm`
     height: 40px;
@@ -22,8 +22,8 @@ const Container = styled.section`
   `}
 `
 
-const Banner = ({ children }) => {
-	return <Container>{children}</Container>
+const Banner = (props) => {
+	return <Container>{props.children}</Container>
 }
 
 export default Banner

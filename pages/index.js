@@ -1,27 +1,23 @@
+/* eslint-disable react/no-unescaped-entities */
+
 // Dependencies
+import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import Moment from 'react-moment'
 import styled from 'styled-components'
 
 // Required Components
 import Socials from '../components/Socials'
 import Banner from '../components/Banner'
+import ContentWrapper from '../components/ContentWrapper'
+import Navigation from '../components/Navigation'
 
 // Utilities Used
 import { respondTo } from '../utils/_respondTo'
 
-const Wrapper = styled.div`
-	color: ${({ theme }) => theme.colors.secondary};
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-`
-
 const Intro = styled.main`
 	width: 75%;
+	height: 100vh;
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -29,7 +25,7 @@ const Intro = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
-	font-size: 1rem;
+	font-size: ${({ theme }) => theme.fontSizes.sm};
 
 	${respondTo.lg`
     width: 60%;
@@ -37,30 +33,36 @@ const Intro = styled.main`
 `
 const Para = styled.p`
 	font-family: 'Noto Sans JP', sans-serif;
-	color: ${({ theme }) => theme.colors.primary};
-	padding: 0;
+	color: ${({ theme }) => theme.colors.wolfGray};
+	padding: 30px 0;
 	margin: 0;
 	text-align: left;
-	font-size: 1.15rem;
+	font-size: ${({ theme }) => theme.fontSizes.md};
+	line-height: 1.5;
 
-	${respondTo.sm`
-    font-size: 2.25rem;
-  `}
-`
+	a {
+		display: inline-block;
+		line-height: 0.8;
+		color: ${({ theme }) => theme.colors.powderWhite};
+		font-weight: 500;
+		border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
+		text-decoration: none;
+	}
 
-const Grouped = styled.div`
-	color: ${({ theme }) => theme.colors.primary};
-	font-weight: bold;
-	padding-bottom: 50px;
+	a:hover {
+		color: ${({ theme }) => theme.colors.primary};
+		transition: 0.15s ease-in-out;
+		border: none;
+	}
 `
 
 const Footer = styled.section`
 	color: ${({ theme }) => theme.colors.onyx};
 	font-size: 1rem;
 `
-const Title = styled.h1`
+const SiteTitle = styled.h1`
 	font-family: 'Poppins', sans-serif;
-	font-size: 2.75em;
+	font-size: ${({ theme }) => theme.fontSizes.xl};
 	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
@@ -87,13 +89,25 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Wrapper>
+			<ContentWrapper>
 				<Banner>New website launching Late May/Early June 2021</Banner>
+				<Navigation />
 				<Intro>
-					<Title>
-						Hey, I'm <strong>Caleb</strong>.
-					</Title>
-					<Para>I'm a Portland based Frontend Engineer.</Para>
+					<SiteTitle>
+						Hey, I'm <strong>Caleb</strong>
+					</SiteTitle>
+					<h2>I'm a Portland, OR based Frontend Engineer.</h2>
+					<Para>
+						I'm passionate about building a better web with
+						exceptional digital experiences. Currently freelancing
+						as{' '}
+						<a href='https://www.fairwaycreative.com'>
+							Fairway Creative
+						</a>{' '}
+						and open to full-time remote opportunities. You can
+						learn more about my current skills, view cv, and more
+						below.
+					</Para>
 					<Socials />
 				</Intro>
 
@@ -103,7 +117,7 @@ export default function Home() {
 						All Rights Reserved.
 					</p>
 				</Footer>
-			</Wrapper>
+			</ContentWrapper>
 		</>
 	)
 }

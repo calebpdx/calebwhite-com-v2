@@ -1,40 +1,20 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import normalize from 'normalize.css/normalize.css'
+import { ThemeProvider } from 'styled-components'
 import '../styles/_fontStyles.css'
+
+import theme from '../themes/_darkTheme'
+import GlobalStyle from '../styles/globalStyles'
+import ContentWrapper from '../components/ContentWrapper'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { config } from '@fortawesome/fontawesome-svg-core'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+import { respondTo } from '../utils/_respondTo'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import normalize from 'normalize.css/normalize.css'
-
-const GlobalStyle = createGlobalStyle`
-
-  body {
-    background-color: #020202;
-  	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
-
-const theme = {
-	colors: {
-		primary: '#06B49A',
-		secondary: '#AFDBD2',
-		powderWhite: '#FFFDF9',
-		onyx: '#36313D',
-	},
-	fonts: ['Helvetica', 'sans-serif', 'Roboto'],
-	fontSizes: {
-		xs: '0.75em',
-		sm: '1em',
-		md: '2em',
-		lg: '3em',
-	},
-}
 
 export default function App({ Component, pageProps }) {
 	return (

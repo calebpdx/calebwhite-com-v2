@@ -20,13 +20,13 @@ const Container = styled.ul`
 	justify-content: center;
 
 	li {
-		font-size: 1.25rem;
+		font-size: ${({ theme }) => theme.iconSizes.sm};
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
 		${respondTo.sm`
-            font-size: 1.5rem;
+            font-size: ${({ theme }) => theme.iconSizes.md};
         `}
 	}
 
@@ -39,7 +39,7 @@ const Container = styled.ul`
 	}
 
 	a:hover {
-		transition: 0.25s ease-in;
+		transition: 0.25s ease-in-out;
 		color: ${({ theme }) => theme.colors.primary};
 	}
 `
