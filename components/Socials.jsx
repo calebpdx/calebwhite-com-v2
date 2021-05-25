@@ -53,7 +53,7 @@ const Socials = () => {
 				</a>
 			</li>
 			<li>
-				<a href='https://www.github.com/cloroxo'>
+				<a href='https://www.github.com/calebpdx'>
 					<FontAwesomeIcon icon={faGithub} size='lg' />
 				</a>
 			</li>
