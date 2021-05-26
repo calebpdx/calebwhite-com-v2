@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import theme from '../themes/_darkTheme'
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
 const Menu = styled.ul`
 	display: flex;

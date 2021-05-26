@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import theme from '../themes/_darkTheme'
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
 const GlobalStyle = createGlobalStyle`
 
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 	text-align: left;
 	font-size: ${theme.fontSizes.md};
 
-	${respondTo.sm`
+	${respondAt.sm`
     font-size: ${theme.fontSizes.lg};
   `}
 

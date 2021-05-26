@@ -3,21 +3,22 @@
 // Dependencies
 import React from 'react'
 import Head from 'next/head'
-import Moment from 'react-moment'
 import styled from 'styled-components'
 
 // Required Components
-import Socials from '../components/Socials'
-import Banner from '../components/Banner'
-import ContentWrapper from '../components/ContentWrapper'
-import Navigation from '../components/Navigation'
+import Socials from '../components/socials'
+import Banner from '../components/banner'
+import PageWrapper from '../components/pageWrapper'
+import Navigation from '../components/navigation'
+import About from '../components/about'
+import Footer from '../components/footer'
+import Arrow from '../components/arrow'
 
 // Utilities Used
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
-const Intro = styled.main`
+const Landing = styled.section`
 	width: 75%;
-	height: 100vh;
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -27,10 +28,24 @@ const Intro = styled.main`
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
 
-	${respondTo.lg`
+	${respondAt.lg`
     width: 60%;
   `}
 `
+
+const Intro = styled.main`
+	min-height: 92vh;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex: auto 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
+	font-size: ${({ theme }) => theme.fontSizes.sm};
+`
+
 const Para = styled.p`
 	font-family: 'Noto Sans JP', sans-serif;
 	color: ${({ theme }) => theme.colors.wolfGray};
@@ -55,11 +70,6 @@ const Para = styled.p`
 		border: none;
 	}
 `
-
-const Footer = styled.section`
-	color: ${({ theme }) => theme.colors.onyx};
-	font-size: 1rem;
-`
 const SiteTitle = styled.h1`
 	font-family: 'Poppins', sans-serif;
 	font-size: ${({ theme }) => theme.fontSizes.xl};
@@ -72,7 +82,7 @@ const SiteTitle = styled.h1`
 		font-weight: 600;
 	}
 
-	${respondTo.sm`
+	${respondAt.sm`
     font-size: 4.75rem;
   `}
 `
@@ -89,34 +99,39 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<ContentWrapper>
+			<PageWrapper>
 				<Navigation />
-				<Intro>
-					<SiteTitle>
-						Hey, I'm <strong>Caleb</strong>
-					</SiteTitle>
-					<h2>I'm a Portland, OR based Frontend Engineer.</h2>
-					<Para>
-						I'm passionate about building a better web with
-						exceptional digital experiences. Currently freelancing
-						as{' '}
-						<a href='https://www.fairwaycreative.com'>
-							Fairway Creative
-						</a>{' '}
-						and open to full-time remote opportunities. You can
-						learn more about my current skills, view cv, and more
-						below.
-					</Para>
-					<Socials />
-				</Intro>
+				<Landing>
+					<Intro>
+						<SiteTitle>
+							Hey, I'm <strong>Caleb</strong>
+						</SiteTitle>
+						<h2>I'm a Portland, OR based Frontend Engineer.</h2>
+						<Para>
+							I'm passionate about building a better web with
+							exceptional digital experiences. Currently
+							freelancing as{' '}
+							<a href='https://www.fairwaycreative.com'>
+								Fairway Creative
+							</a>{' '}
+							and open to full-time remote opportunities. You can
+							learn more about my current skills, view cv, and
+							more below.
+						</Para>
+						<Socials />
+					</Intro>
+					<Arrow />
+				</Landing>
+				<About />
+				<Footer />
 
-				<Footer>
+				{/* <Footer>
 					<p>
 						Copyright &copy; <Moment format='YYYY' /> Caleb White.
 						All Rights Reserved.
 					</p>
-				</Footer>
-			</ContentWrapper>
+				</Footer> */}
+			</PageWrapper>
 		</>
 	)
 }

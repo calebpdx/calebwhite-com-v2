@@ -7,12 +7,9 @@ import '../styles/_fontStyles.css'
 
 import theme from '../themes/_darkTheme'
 import GlobalStyle from '../styles/globalStyles'
-import ContentWrapper from '../components/ContentWrapper'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { config } from '@fortawesome/fontawesome-svg-core'
-
-import { respondTo } from '../utils/_respondTo'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 

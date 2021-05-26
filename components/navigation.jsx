@@ -4,25 +4,26 @@ import Link from 'next/link'
 
 //import theme styles
 import theme from '../themes/_darkTheme'
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
 import Logo from './logo'
 import NavMenu from './navMenu'
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	margin-top: 20px;
+	min-height: 60px;
 `
 const NavBar = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	margin: auto;
 	width: 75%;
-	height: 70px;
+	height: 60px;
 
-	${respondTo.lg`
+	${respondAt.lg`
         width: 60%;
     `}
 `

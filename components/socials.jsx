@@ -4,12 +4,13 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faGithub,
+	faInstagram,
 	faLinkedin,
 	faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
 // Utilities Used
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
 const Container = styled.ul`
 	display: flex;
@@ -25,7 +26,7 @@ const Container = styled.ul`
 		justify-content: center;
 		align-items: center;
 
-		${respondTo.sm`
+		${respondAt.sm`
             font-size: ${({ theme }) => theme.iconSizes.md};
         `}
 	}
@@ -55,6 +56,11 @@ const Socials = () => {
 			<li>
 				<a href='https://www.github.com/calebpdx'>
 					<FontAwesomeIcon icon={faGithub} size='lg' />
+				</a>
+			</li>
+			<li>
+				<a href='https://www.instagram.com/cloroxo'>
+					<FontAwesomeIcon icon={faInstagram} size='lg' />
 				</a>
 			</li>
 			<li>

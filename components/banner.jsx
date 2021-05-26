@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Utilities Used
-import { respondTo } from '../utils/_respondTo'
+import { respondAt } from '../utils/_respondAt'
 
 const Container = styled.section`
 	display: flex;
@@ -16,7 +16,7 @@ const Container = styled.section`
 	height: 30px;
 	background-color: ${({ theme }) => theme.colors.secondary};
 
-	${respondTo.sm`
+	${respondAt.sm`
     height: 40px;
     font-size: 1.15rem;
   `}
