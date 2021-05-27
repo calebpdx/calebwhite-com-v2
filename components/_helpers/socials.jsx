@@ -3,9 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-	faGithub,
+	faGithubAlt,
 	faInstagram,
-	faLinkedin,
+	faLinkedinIn,
 	faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 
@@ -37,6 +37,7 @@ const Container = styled.ul`
 
 	a {
 		color: ${({ theme }) => theme.colors.secondary};
+		border: none;
 	}
 
 	a:hover {
@@ -55,7 +56,7 @@ const Socials = () => {
 			</li>
 			<li>
 				<a href='https://www.github.com/calebpdx'>
-					<FontAwesomeIcon icon={faGithub} size='lg' />
+					<FontAwesomeIcon icon={faGithubAlt} size='lg' />
 				</a>
 			</li>
 			<li>
@@ -65,7 +66,7 @@ const Socials = () => {
 			</li>
 			<li>
 				<a href='https://www.linkedin.com/in/calebawhite'>
-					<FontAwesomeIcon icon={faLinkedin} size='lg' />
+					<FontAwesomeIcon icon={faLinkedinIn} size='lg' />
 				</a>
 			</li>
 		</Container>

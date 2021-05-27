@@ -18,6 +18,7 @@ import Arrow from '../components/arrow'
 import { respondAt } from '../utils/_respondAt'
 
 const Landing = styled.section`
+	min-height: calc(100vh - 117px);
 	width: 75%;
 	padding: 0;
 	margin: 0;
@@ -34,7 +35,6 @@ const Landing = styled.section`
 `
 
 const Intro = styled.main`
-	min-height: 92vh;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -56,18 +56,7 @@ const Para = styled.p`
 	line-height: 1.5;
 
 	a {
-		display: inline-block;
-		line-height: 0.8;
-		color: ${({ theme }) => theme.colors.powderWhite};
-		font-weight: 500;
 		border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
-		text-decoration: none;
-	}
-
-	a:hover {
-		color: ${({ theme }) => theme.colors.primary};
-		transition: 0.15s ease-in-out;
-		border: none;
 	}
 `
 const SiteTitle = styled.h1`
@@ -106,7 +95,7 @@ export default function Home() {
 						<SiteTitle>
 							Hey, I'm <strong>Caleb</strong>
 						</SiteTitle>
-						<h2>I'm a Portland, OR based Frontend Engineer.</h2>
+						<h2>A Frontend Engineer based in Portland, OR</h2>
 						<Para>
 							I'm passionate about building a better web with
 							exceptional digital experiences. Currently

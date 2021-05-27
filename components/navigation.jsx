@@ -3,18 +3,24 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 //import theme styles
-import theme from '../themes/_darkTheme'
-import { respondAt } from '../utils/_respondAt'
+import theme from '../../themes/_darkTheme'
+import { respondAt } from '../../utils/_respondAt'
 
-import Logo from './logo'
+import Logo from '../logo'
 import NavMenu from './navMenu'
+import { faExpeditedssl } from '@fortawesome/free-brands-svg-icons'
 
 const Wrapper = styled.div`
 	display: flex;
+	background: black;
+	position: sticky;
+	margin-top: 1.2em;
+	padding: 1.2em 0;
+	top: 0;
 	flex-direction: row;
 	width: 100%;
-	margin-top: 20px;
 	min-height: 60px;
+	opacity: 90%;
 `
 const NavBar = styled.nav`
 	display: flex;

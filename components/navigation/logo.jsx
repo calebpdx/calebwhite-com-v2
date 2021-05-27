@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import theme from '../themes/_darkTheme'
 
 const SvgStyle = styled.svg`
+	opacity: 100%;
 	height: 60px;
 	width: 50px;
 	fill: ${({ theme }) => theme.colors.powderWhite};
