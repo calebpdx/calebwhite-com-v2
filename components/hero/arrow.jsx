@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import theme from '../../themes/_darkTheme'
+import { respondAt } from '../../utils/_respondAt'
 
 const bounce = keyframes`
 	
@@ -24,7 +25,7 @@ const bounce = keyframes`
 
 const Container = styled.div`
 	width: 100%;
-	display: flex;
+	display: none;
 	flex-direction: flex-column;
 	justify-content: center;
 	align-items: flex-end;
@@ -33,6 +34,10 @@ const Container = styled.div`
 	.downArrow {
 		color: ${({ theme }) => theme.colors.powderWhite};
 	}
+
+	${respondAt.sm`
+		display:flex;
+	`}
 
 	div {
 		color: ${({ theme }) => theme.colors.onyx};
