@@ -6,22 +6,22 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 // Required Components
-import Socials from '../components/socials'
-import Banner from '../components/banner'
-import PageWrapper from '../components/pageWrapper'
+import Socials from '../components/_helpers/socials'
+import Banner from '../components/_helpers/banner'
+import PageWrapper from '../components/_helpers/pageWrapper'
 import Navigation from '../components/navigation'
 import About from '../components/about'
 import Footer from '../components/footer'
-import Arrow from '../components/arrow'
+import Arrow from '../components/hero/arrow'
 
 // Utilities Used
 import { respondAt } from '../utils/_respondAt'
 
 const Landing = styled.section`
-	min-height: calc(100vh - 117px);
+	min-height: 100vh;
 	width: 75%;
 	padding: 0;
-	margin: 0;
+	margin: 4rem;
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
@@ -29,9 +29,14 @@ const Landing = styled.section`
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
 
+	${respondAt.sm`
+		margin: 0;
+	`}
+
 	${respondAt.lg`
-    width: 60%;
-  `}
+		width: 65%;
+		max-width: 1520px;
+  	`}
 `
 
 const Intro = styled.main`
@@ -113,13 +118,6 @@ export default function Home() {
 				</Landing>
 				<About />
 				<Footer />
-
-				{/* <Footer>
-					<p>
-						Copyright &copy; <Moment format='YYYY' /> Caleb White.
-						All Rights Reserved.
-					</p>
-				</Footer> */}
 			</PageWrapper>
 		</>
 	)

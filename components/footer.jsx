@@ -12,7 +12,8 @@ const Container = styled.footer`
 	height: 100px;
 
 	${respondAt.sm`
-		width: 60%;
+		width: 65%;
+		max-width: 1520px;
 	`}
 `
 const FootActual = styled.p`

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../themes/_darkTheme'
+import theme from '../../themes/_darkTheme'
 
 const SvgStyle = styled.svg`
 	opacity: 100%;

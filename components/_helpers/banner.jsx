@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Utilities Used
-import { respondAt } from '../utils/_respondAt'
+import { respondAt } from '../../utils/_respondAt'
 
 const Container = styled.section`
 	display: flex;

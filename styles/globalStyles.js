@@ -34,13 +34,19 @@ const GlobalStyle = createGlobalStyle`
 		color: ${theme.colors.powderWhite};
 		font-weight: 500;
 		text-decoration: none;
-	}
-
-	a:hover,
-	a:focus {
+	:hover,
+	:focus {
 		color: ${theme.colors.primary};
 		transition: 0.15s ease-in-out;
 		border: none;
+	}
+
+	}
+
+	p{
+		font-size: ${theme.fontSizes.sm};
+		color: ${theme.colors.powderWhite};
+		line-height: 1.5;
 	}
 `
 

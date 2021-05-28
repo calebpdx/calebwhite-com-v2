@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 // Utilities Used
-import { respondAt } from '../utils/_respondAt'
+import { respondAt } from '../../utils/_respondAt'
 
 const Container = styled.ul`
 	display: flex;

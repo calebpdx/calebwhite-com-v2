@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-import theme from '../themes/_darkTheme'
+import theme from '../../themes/_darkTheme'
 
 const bounce = keyframes`
 	
@@ -55,7 +55,7 @@ const Arrow = () => {
 
 	useEffect(() => {
 		const toggleVisibility = () => {
-			if (window.pageYOffset <= 300) {
+			if (window.pageYOffset <= 400) {
 				setIsVisible(true)
 			} else {
 				setIsVisible(false)
