@@ -92,8 +92,10 @@ const Profile = () => {
 							src={currentImage.src}
 							width={350}
 							height={350}
+							quality={50}
 							className='rounded'
 							layout='responsive'
+							loading='eager'
 						/>
 						<figcaption>{currentImage.alt}</figcaption>
 					</figure>
