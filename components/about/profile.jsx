@@ -90,9 +90,8 @@ const Profile = () => {
 					<figure key={currentImage.id}>
 						<Image
 							src={currentImage.src}
-							width={350}
-							height={350}
-							quality={25}
+							width='fill'
+							height='fill'
 							className='rounded'
 							layout='responsive'
 							loading='eager'
