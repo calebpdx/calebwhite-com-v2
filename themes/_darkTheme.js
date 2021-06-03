@@ -2,7 +2,7 @@ const theme = {
 	colors: {
 		primary: '#FC4349',
 		secondary: '#6DBCDB',
-		powderWhite: '#FFFDF9',
+		powderWhite: '#FFFFFF',
 		wolfGray: '#D7DADB',
 		onyx: '#36313D',
 		bg: '#020202',

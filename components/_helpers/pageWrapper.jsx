@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+	background-color: ${({ theme }) => theme.colors.bg};
 	color: ${({ theme }) => theme.colors.secondary};
 	display: flex;
 	flex-direction: column;

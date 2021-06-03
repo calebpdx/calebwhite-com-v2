@@ -7,23 +7,20 @@ import { respondAt } from '../utils/_respondAt'
 
 const Container = styled.footer`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
-	height: 100px;
+	height: 40px;
+	padding: 2rem 0;
+	color: ${({ theme }) => theme.colors.onyx};
+	font-size: 1rem;
 
 	${respondAt.sm`
+		flex-direction: row;
 		width: 65%;
 		max-width: 1520px;
 	`}
-`
-const FootActual = styled.p`
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
-	height: 40px;
-	color: ${({ theme }) => theme.colors.onyx};
-	font-size: 1rem;
 `
 
 const Copyright = styled.div`
@@ -38,13 +35,11 @@ const Source = styled.div`
 const Footer = () => {
 	return (
 		<Container>
-			<FootActual>
-				<Copyright>
-					Copyright &copy; <Moment format='YYYY' /> Caleb White. All
-					Rights Reserved.
-				</Copyright>
-				<Source>Source GITHUB</Source>
-			</FootActual>
+			<Copyright>
+				Copyright &copy; <Moment format='YYYY' /> Caleb White. All
+				Rights Reserved.
+			</Copyright>
+			<Source>Source GITHUB</Source>
 		</Container>
 	)
 }
