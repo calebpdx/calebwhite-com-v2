@@ -59,22 +59,22 @@ const Thumbs = styled.div`
 const imageDir = [
 	{
 		id: 1,
-		src: '/asset_images/caleb-grayscale.png',
+		src: '/asset_images/caleb-grayscale.jpg',
 		alt: 'Caleb White - Frontend Engineer',
 	},
 	{
 		id: 2,
-		src: '/asset_images/caleb-1.png',
+		src: '/asset_images/caleb-1_small.png',
 		alt: 'Beautiful Kaiui Sunset',
 	},
 	{
 		id: 3,
-		src: '/asset_images/caleb-1.png',
+		src: '/asset_images/caleb-1_small.png',
 		alt: 'Beautiful Kaiui Sunset',
 	},
 	{
 		id: 4,
-		src: '/asset_images/caleb.png',
+		src: '/asset_images/caleb_small.png',
 		alt: 'Caleb in Color',
 	},
 ]
@@ -88,20 +88,20 @@ const Profile = () => {
 				.filter((image) => image.id == activeImg)
 				.map((currentImage) => (
 					<figure key={currentImage.id}>
-						{/* <Image
+						<Image
 							src={currentImage.src}
 							width={350}
 							height={350}
-							quality={50}
+							quality={25}
 							className='rounded'
 							layout='responsive'
 							loading='eager'
-						/> */}
-						<img
+						/>
+						{/* <img
 							src={currentImage.src}
 							alt={currentImage.alt}
 							className='rounded'
-						/>
+						/> */}
 						<figcaption>{currentImage.alt}</figcaption>
 					</figure>
 				))}
