@@ -19,6 +19,10 @@ const Profiled = styled.aside`
 		padding: 0;
 		margin: 0;
 
+		img {
+			border-radius: 1em;
+		}
+
 		figcaption {
 			text-align: center;
 			padding: 10px;
@@ -65,17 +69,17 @@ const imageDir = [
 	},
 	{
 		id: 2,
-		src: '/asset_images/caleb-1_small.png',
+		src: '/asset_images/caleb-1.jpg',
 		alt: 'Beautiful Kaiui Sunset',
 	},
 	{
 		id: 3,
-		src: '/asset_images/caleb-1_small.png',
+		src: '/asset_images/caleb_black.jpg',
 		alt: 'Beautiful Kaiui Sunset',
 	},
 	{
 		id: 4,
-		src: '/asset_images/caleb_small.png',
+		src: '/asset_images/caleb.jpg',
 		alt: 'Caleb in Color',
 	},
 ]
@@ -88,20 +92,14 @@ const Profile = () => {
 			{imageDir
 				.filter((image) => image.id == activeImg)
 				.map((currentImage) => (
-					<figure key={currentImage.id}>
+					<figure className='rounded' key={currentImage.id}>
 						<Image
 							src={currentImage.src}
 							width='fill'
 							height='fill'
-							className='rounded'
 							layout='responsive'
-							loading='eager'
 						/>
-						{/* <img
-							src={currentImage.src}
-							alt={currentImage.alt}
-							className='rounded'
-						/> */}
+
 						<figcaption>{currentImage.alt}</figcaption>
 					</figure>
 				))}
