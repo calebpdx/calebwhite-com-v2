@@ -32,6 +32,7 @@ const Profiled = styled.aside`
 
 const Thumbs = styled.div`
 	display: flex;
+	list-style-type: none;
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin-top: 1rem;
@@ -109,7 +110,20 @@ const Profile = () => {
 				{imageDir
 					.filter((image) => image.id != activeImg)
 					.map((thumbImg) => (
-						<img
+						<div key={thumbImg.id} className='img-thumb'>
+							<Image
+								src={thumbImg.src}
+								width={350}
+								height={350}
+								className='img-thumb'
+								alt={thumbImg.alt}
+								onClick={() => {
+									setImage(thumbImg.id)
+								}}
+							/>
+						</div>
+					))}
+				{/* <img
 							key={thumbImg.id}
 							className='img-thumb'
 							src={thumbImg.src}
@@ -117,8 +131,7 @@ const Profile = () => {
 							onClick={() => {
 								setImage(thumbImg.id)
 							}}
-						/>
-					))}
+						/> */}
 			</Thumbs>
 		</Profiled>
 	)
