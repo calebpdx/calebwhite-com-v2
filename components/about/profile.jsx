@@ -88,7 +88,7 @@ const Profile = () => {
 				.filter((image) => image.id == activeImg)
 				.map((currentImage) => (
 					<figure key={currentImage.id}>
-						<Image
+						{/* <Image
 							src={currentImage.src}
 							width={350}
 							height={350}
@@ -96,6 +96,11 @@ const Profile = () => {
 							className='rounded'
 							layout='responsive'
 							loading='eager'
+						/> */}
+						<img
+							src={currentImage.src}
+							alt={currentImage.alt}
+							className='rounded'
 						/>
 						<figcaption>{currentImage.alt}</figcaption>
 					</figure>
