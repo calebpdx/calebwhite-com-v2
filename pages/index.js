@@ -34,7 +34,7 @@ const Landing = styled.section`
 	`}
 
 	${respondAt.lg`
-		width: 65%;
+		width: 70%;
 		max-width: 1520px;
   	`}
 `
