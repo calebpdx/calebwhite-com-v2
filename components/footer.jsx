@@ -11,9 +11,9 @@ const Container = styled.footer`
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: 40px;
+	min-height: 2.5rem;
 	padding: 2rem 0;
-	color: ${({ theme }) => theme.colors.onyx};
+	color: ${({ theme }) => theme.colors.wolfGray};
 	font-size: 1rem;
 
 	${respondAt.sm`
@@ -36,8 +36,8 @@ const Footer = () => {
 	return (
 		<Container>
 			<Copyright>
-				Copyright &copy; <Moment format='YYYY' /> Caleb White. All
-				Rights Reserved.
+				Copyright &copy; <Moment format='YYYY' /> &nbsp; Caleb White.
+				All Rights Reserved.
 			</Copyright>
 			<Source>Source GITHUB</Source>
 		</Container>
