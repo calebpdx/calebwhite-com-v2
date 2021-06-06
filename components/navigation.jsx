@@ -14,15 +14,14 @@ const NavBar = styled.nav`
 	display: flex;
 	background-color: black;
 	justify-content: space-between;
-	margin: auto;
 	align-items: center;
-	width: 80%;
+	width: 100%;
 	height: 100px;
 	z-index: 100;
 
-	${respondAt.sm`
+	/* ${respondAt.sm`
         width: 95%;
-    `}
+    `} */
 
 	${respondAt.lg`
 		background-color: transparent;

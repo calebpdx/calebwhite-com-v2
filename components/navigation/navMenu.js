@@ -1,35 +1,53 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import theme from '../../themes/_darkTheme'
 import { respondAt } from '../../utils/_respondAt'
 
 const Menu = styled.ul`
-	display: flex;
-	color: ${({ theme }) => theme.colors.wolfGray};
-	font-size: ${({ theme }) => theme.fontSizes.sm};
-	font-weight: 600;
-	align-items: flex-end;
-	justify-content: center;
-	flex-direction: row;
-	list-style-type: none;
+	ul {
+		display: flex;
+		color: ${({ theme }) => theme.colors.wolfGray};
+		font-size: ${({ theme }) => theme.fontSizes.sm};
+		font-weight: 600;
+		align-items: flex-end;
+		justify-content: center;
+		flex-direction: row;
+		list-style-type: none;
+		padding-right: 1.25rem;
+	}
 
 	li {
 		margin-right: 1rem;
+
+		:last-child {
+			margin-right: 0;
+		}
 	}
 
-	li:last-child {
-		margin-right: 0;
+	ul:hover > li a:not(:hover) {
+		color: ${({ theme }) => theme.colors.onyx};
+		transition: all 0.75s ease-in-out;
 	}
 `
 
 const NavMenu = () => {
 	return (
 		<Menu>
-			<li>about</li>
-			<li>cv</li>
-			<li>projects</li>
-			<li>contact</li>
+			<ul>
+				<li>
+					<a href='/'>about</a>
+				</li>
+				<li>
+					<a href='/'>cv</a>
+				</li>
+				<li>
+					<a href='/'>projects</a>
+				</li>
+				<li>
+					<a href='/'>contact</a>
+				</li>
+			</ul>
 		</Menu>
 	)
 }

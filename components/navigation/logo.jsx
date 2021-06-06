@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import theme from '../../themes/_darkTheme'
 
 const SvgStyle = styled.svg`
+	padding-left: 1.25rem;
 	opacity: 100%;
 	height: 60px;
 	width: 50px;
@@ -13,6 +14,7 @@ const SvgStyle = styled.svg`
 	}
 
 	:hover {
+		cursor: pointer;
 		width: 60px;
 		fill: ${({ theme }) => theme.colors.primary};
 		transition: width 0.25s ease-in-out;
