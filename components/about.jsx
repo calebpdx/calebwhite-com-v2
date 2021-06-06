@@ -8,6 +8,14 @@ import { respondAt } from '../utils/_respondAt'
 import ProfileContents from './about/profile'
 import Narrative from './about/narrative'
 
+const Wrapper = styled.div`
+	background-color: ${({ theme }) => theme.colors.powderWhite};
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-top: 0.5em solid ${({ theme }) => theme.colors.primary};
+`
+
 const Container = styled.main`
 	display: flex;
 	flex-direction: column;
@@ -15,18 +23,19 @@ const Container = styled.main`
 	align-content: center;
 	justify-content: center;
 	width: 80%;
-	margin: 0 2rem;
+	margin: 3rem 2rem;
 
 	${respondAt.sm`
     	flex-direction: row;
-		width: 65%;
+		width: 70%;
         max-width: 1520px;
-	`}
+	`};
 `
 const Title = styled.h2`
 	order: 1;
 	width: 100%;
 	flex-basis: 0 1;
+	font-weight: 600;
 `
 
 const Profile = styled.aside`
@@ -54,15 +63,17 @@ const AboutContent = styled.section`
 
 const About = () => {
 	return (
-		<Container>
-			<Title>About Caleb</Title>
-			<AboutContent>
-				<Narrative />
-			</AboutContent>
-			<Profile>
-				<ProfileContents />
-			</Profile>
-		</Container>
+		<Wrapper>
+			<Container>
+				<Title>Who is Caleb?</Title>
+				<AboutContent>
+					<Narrative />
+				</AboutContent>
+				<Profile>
+					<ProfileContents />
+				</Profile>
+			</Container>
+		</Wrapper>
 	)
 }
 
