@@ -43,21 +43,23 @@ const Thumbs = styled.div`
 	width: 100%;
 	justify-content: space-between;
 
-	.img-thumb {
+	div {
+		display: flex;
+		flex-direction: row;
 		border-radius: 1em;
 		max-width: calc(35% - 1rem);
 		height: auto;
-		margin-right: 1rem;
+		margin: 0 1em 1em 0;
 		opacity: 40%;
 		cursor: pointer;
 
-		:last-child {
-			max-width: 30%;
-			margin: 0;
-		}
-
 		:hover {
 			opacity: 100%;
+		}
+
+		:nth-child(3n) {
+			max-width: 30%;
+			margin-right: 0;
 		}
 	}
 `
@@ -75,7 +77,7 @@ const imageDir = [
 	{
 		id: 3,
 		src: '/asset_images/caleb_black.jpg',
-		alt: 'Beautiful Kaiui Sunset',
+		alt: 'Darth Caleb',
 	},
 	{
 		id: 4,
@@ -113,7 +115,6 @@ const Profile = () => {
 								src={thumbImg.src}
 								width={350}
 								height={350}
-								className='img-thumb'
 								alt={thumbImg.alt}
 								onClick={() => {
 									setImage(thumbImg.id)
