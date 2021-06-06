@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import theme from '../../themes/_darkTheme'
 
 const Nar = styled.div`
-	height: 1900px;
+	p {
+		color: ${({ theme }) => theme.colors.bg};
+	}
 `
 
 const Narrative = () => {
