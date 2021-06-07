@@ -7,16 +7,16 @@ const SvgStyle = styled.svg`
 	opacity: 100%;
 	height: 60px;
 	width: 50px;
-	fill: ${({ theme }) => theme.colors.powderWhite};
+	fill: ${({ theme }) => theme.colors.primary};
 
 	#w-letter {
-		fill: ${({ theme }) => theme.colors.secondary};
+		fill: ${({ theme }) => theme.colors.wolfGray};
 	}
 
 	:hover {
 		cursor: pointer;
 		width: 60px;
-		fill: ${({ theme }) => theme.colors.primary};
+		fill: ${({ theme }) => theme.colors.secondary};
 		transition: width 0.25s ease-in-out;
 		transition: fill 0.25s ease-in-out;
 
