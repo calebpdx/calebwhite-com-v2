@@ -9,6 +9,7 @@ const Wrapper = styled.div`
 	height: 100vh;
 	justify-content: flex-start;
 	align-items: center;
+	transition: all 0.25s linear;
 `
 const ContentWrapper = ({ children }) => {
 	return <Wrapper>{children}</Wrapper>

@@ -16,6 +16,7 @@ import Arrow from '../components/hero/arrow'
 
 // Utilities Used
 import { respondAt } from '../utils/_respondAt'
+import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
 	min-height: 100vh;
@@ -28,6 +29,7 @@ const Landing = styled.section`
 	justify-content: center;
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
+	transition: all 0.25s linear;
 
 	${respondAt.sm`
 		margin: 0;
@@ -81,7 +83,7 @@ const SiteTitle = styled.h1`
   `}
 `
 
-export default function Home() {
+export default function Home(props) {
 	return (
 		<>
 			<Head>

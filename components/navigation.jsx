@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 //import theme styles
-import theme from '../themes/_darkTheme'
 import { respondAt } from '../utils/_respondAt'
 
 import Logo from './navigation/logo'
