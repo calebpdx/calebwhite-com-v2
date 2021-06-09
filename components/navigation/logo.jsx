@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../../themes/_darkTheme'
 
 const LogoWrap = styled.div`
 	display: flex;

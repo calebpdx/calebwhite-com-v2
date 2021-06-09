@@ -25,6 +25,7 @@ import GlobalStyles from '../themes/globalStyles'
 import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
+	height: 40em;
 	min-height: 100vh;
 	width: 75%;
 	padding: 0;
@@ -114,7 +115,7 @@ const NavBar = styled.nav`
 
 export default function Home() {
 	const [theme, toggleTheme] = useDarkMode()
-	const themeMode = theme === 'main' ? mainTheme : darkTheme
+	const themeMode = theme === 'mainTheme' ? mainTheme : darkTheme
 
 	return (
 		<>

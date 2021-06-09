@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
-import theme from '../../themes/_darkTheme'
 import { respondAt } from '../../utils/_respondAt'
 
 const bounce = keyframes`

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
-import theme from '../../themes/_darkTheme'
 import { respondAt } from '../../utils/_respondAt'
 
 const Profiled = styled.aside`

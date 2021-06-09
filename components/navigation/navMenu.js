@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-import theme from '../../themes/_darkTheme'
 import { respondAt } from '../../utils/_respondAt'
 
 const Menu = styled.ul`
@@ -10,7 +9,7 @@ const Menu = styled.ul`
 		color: ${({ theme }) => theme.colors.altDark};
 		font-size: ${({ theme }) => theme.fontSizes.sm};
 		font-weight: 600;
-		align-items: flex-end;
+		align-items: center;
 		justify-content: center;
 		flex-direction: row;
 		list-style-type: none;

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import theme from '../themes/_darkTheme'
 import { respondAt } from '../utils/_respondAt'
 
 // About Page Parts
