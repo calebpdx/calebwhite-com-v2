@@ -27,7 +27,6 @@ const ThemeButton = styled.button`
 `
 
 const Toggle = ({ theme, toggleTheme }) => {
-	console.log({ theme })
 	const isMain = theme === 'mainTheme'
 
 	return (

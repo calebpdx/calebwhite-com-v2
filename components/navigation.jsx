@@ -23,7 +23,27 @@ const NavBar = styled.nav`
     `} */
 
 	${respondAt.lg`
-		background-color: transparent;
+		border-color: ${({ theme }) => theme.colors.title};
+
+		border: none;
+	`}
+`
+const NavBarActive = styled.nav`
+	position: fixed;
+	display: flex;
+	background-color: black;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+
+	/* ${respondAt.sm`
+        width: 95%;
+    `} */
+
+	${respondAt.lg`
+		border: 4em solid ${({ theme }) => theme.colors.title};
 	`}
 `
 

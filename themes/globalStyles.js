@@ -37,8 +37,7 @@ const GlobalStyles = createGlobalStyle`
 		
 		:hover,
 		:focus {
-			color: ${({ theme }) => theme.colors.primary};
-			transition: 0.15s ease-in-out;
+			color: ${({ theme }) => theme.colors.secondary};
 			border: none;
 		}
 
@@ -48,7 +47,7 @@ const GlobalStyles = createGlobalStyle`
 		font-size: ${({ theme }) => theme.fontSizes.sm};
 		color: ${({ theme }) => theme.colors.altLight};
 		line-height: 1.5;
-		transition: all 0.25s linear;
+		
 	}
 `
 
