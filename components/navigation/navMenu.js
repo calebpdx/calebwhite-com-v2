@@ -7,7 +7,7 @@ import { respondAt } from '../../utils/_respondAt'
 const Menu = styled.ul`
 	ul {
 		display: flex;
-		color: ${({ theme }) => theme.colors.wolfGray};
+		color: ${({ theme }) => theme.colors.altDark};
 		font-size: ${({ theme }) => theme.fontSizes.sm};
 		font-weight: 600;
 		align-items: flex-end;
@@ -25,8 +25,17 @@ const Menu = styled.ul`
 		}
 	}
 
+	a {
+		color: ${({ theme }) => theme.colors.title};
+		
+		:hover, :focus {
+			color: color: ${({ theme }) => theme.colors.primary};
+		}
+
+	}
+
 	ul:hover > li a:not(:hover) {
-		color: ${({ theme }) => theme.colors.onyx};
+		color: ${({ theme }) => theme.colors.disabled};
 		transition: all 0.75s ease-in-out;
 	}
 `

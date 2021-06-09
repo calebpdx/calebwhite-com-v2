@@ -4,7 +4,7 @@ import { respondAt } from '../utils/_respondAt'
 const GlobalStyles = createGlobalStyle`
 
   body {
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: ${({ theme }) => theme.colors.bg.main};
   	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin: 0;
@@ -30,9 +30,10 @@ const GlobalStyles = createGlobalStyle`
   a {
 	display: inline-block;
 	line-height: 0.8;
-	color: ${({ theme }) => theme.colors.powderWhite};
+	color: ${({ theme }) => theme.colors.altLight};
 	font-weight: 500;
 	text-decoration: none;
+	transition: all 0.25s linear;
 		
 		:hover,
 		:focus {
@@ -43,10 +44,11 @@ const GlobalStyles = createGlobalStyle`
 
 	}
 
-	p{
+	p {
 		font-size: ${({ theme }) => theme.fontSizes.sm};
-		color: ${({ theme }) => theme.colors.powderWhite};
+		color: ${({ theme }) => theme.colors.altLight};
 		line-height: 1.5;
+		transition: all 0.25s linear;
 	}
 `
 

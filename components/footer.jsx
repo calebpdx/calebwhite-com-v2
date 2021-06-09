@@ -13,7 +13,8 @@ const Container = styled.footer`
 	width: 100%;
 	min-height: 2.5rem;
 	padding: 2rem 0;
-	color: ${({ theme }) => theme.colors.wolfGray};
+	background-color: ${({ theme }) => theme.colors.bg.main};
+	color: ${({ theme }) => theme.colors.altLight};
 	font-size: 1rem;
 
 	${respondAt.sm`

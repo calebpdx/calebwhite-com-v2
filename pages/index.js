@@ -3,9 +3,11 @@
 // Dependencies
 import React from 'react'
 import Head from 'next/head'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 // Required Components
+import Logo from '../components/navigation/logo'
+import Menu from '../components/navigation/navMenu'
 import Socials from '../components/_helpers/socials'
 import Banner from '../components/_helpers/banner'
 import PageWrapper from '../components/_helpers/pageWrapper'
@@ -16,6 +18,10 @@ import Arrow from '../components/hero/arrow'
 
 // Utilities Used
 import { respondAt } from '../utils/_respondAt'
+import { useDarkMode } from '../themes/useDarkMode'
+import { mainTheme, darkTheme } from '../themes/themes'
+import GlobalStyles from '../themes/globalStyles'
+
 import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
@@ -29,7 +35,6 @@ const Landing = styled.section`
 	justify-content: center;
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
-	transition: all 0.25s linear;
 
 	${respondAt.sm`
 		margin: 0;
@@ -49,22 +54,26 @@ const Intro = styled.main`
 	flex: auto 1;
 	flex-direction: column;
 	justify-content: center;
-	align-items: start;
+	align-items: flex-start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
 `
 
 const Para = styled.p`
 	font-family: 'Noto Sans JP', sans-serif;
-	color: ${({ theme }) => theme.colors.wolfGray};
+	color: ${({ theme }) => theme.colors.altLight};
 	padding: 30px 0;
 	margin: 0;
 	text-align: left;
-	font-size: ${({ theme }) => theme.fontSizes.md};
+	font-size: ${({ theme }) => theme.fontSizes.sm};
 	line-height: 1.5;
 
 	a {
 		border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
 	}
+
+	${respondAt.sm`
+		font-size: ${({ theme }) => theme.fontSizes.md};
+  	`}
 `
 const SiteTitle = styled.h1`
 	font-family: 'Poppins', sans-serif;
@@ -72,7 +81,7 @@ const SiteTitle = styled.h1`
 	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
-	color: ${({ theme }) => theme.colors.powderWhite};
+	color: ${({ theme }) => theme.colors.title};
 
 	strong {
 		font-weight: 600;
@@ -83,7 +92,30 @@ const SiteTitle = styled.h1`
   `}
 `
 
-export default function Home(props) {
+const NavBar = styled.nav`
+	position: fixed;
+	display: flex;
+	background-color: ${({ theme }) => theme.colors.bg.main};
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+
+	/* ${respondAt.sm`
+        width: 95%;
+    `} */
+
+	${respondAt.lg`
+		
+		background-color: transparent;
+	`}
+`
+
+export default function Home() {
+	const [theme, toggleTheme] = useDarkMode()
+	const themeMode = theme === 'main' ? mainTheme : darkTheme
+
 	return (
 		<>
 			<Head>
@@ -94,33 +126,40 @@ export default function Home(props) {
 				/>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
+			<ThemeProvider theme={themeMode}>
+				<GlobalStyles />
 
-			<PageWrapper>
-				<Navigation />
-				<Landing>
-					<Intro>
-						<SiteTitle>
-							Hey, I'm <strong>Caleb</strong>
-						</SiteTitle>
-						<h2>A Frontend Engineer based in Portland, OR</h2>
-						<Para>
-							I'm passionate about building a better web with
-							exceptional digital experiences. Currently
-							freelancing as{' '}
-							<a href='https://www.fairwaycreative.com'>
-								Fairway Creative
-							</a>{' '}
-							and open to full-time remote opportunities. You can
-							learn more about my current skills, view cv, and
-							more below.
-						</Para>
-						<Socials />
-					</Intro>
-					<Arrow />
-				</Landing>
-				<About />
-				<Footer />
-			</PageWrapper>
+				<PageWrapper>
+					<NavBar>
+						<Logo />
+						<Menu />
+						<Toggle theme={theme} toggleTheme={toggleTheme} />
+					</NavBar>
+					<Landing>
+						<Intro>
+							<SiteTitle>
+								Hey, I'm <strong>Caleb</strong>
+							</SiteTitle>
+							<h2>A Frontend Engineer based in Portland, OR</h2>
+							<Para>
+								I'm passionate about building a better web with
+								exceptional digital experiences. Currently
+								freelancing as{' '}
+								<a href='https://www.fairwaycreative.com'>
+									Fairway Creative
+								</a>{' '}
+								and open to full-time remote opportunities. You
+								can learn more about my current skills, view cv,
+								and more below.
+							</Para>
+							<Socials />
+						</Intro>
+						<Arrow />
+					</Landing>
+					<About />
+					<Footer />
+				</PageWrapper>
+			</ThemeProvider>
 		</>
 	)
 }

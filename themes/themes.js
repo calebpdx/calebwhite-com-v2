@@ -1,11 +1,16 @@
 export const mainTheme = {
 	colors: {
-		primary: '#FC4349',
-		secondary: '#6DBCDB',
-		powderWhite: '#36313D',
-		wolfGray: '#000',
+		primary: '#6DBCDB',
+		secondary: '#FC4349',
+		altLight: '#36313D',
+		altDark: '#CCC',
 		onyx: '#36313D',
-		bg: '#D7DADB',
+		bg: {
+			main: '#FEFEFE',
+			secondary: '#000000',
+		},
+		disabled: '#DDDDDD',
+		title: '#000000',
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {
@@ -26,10 +31,15 @@ export const darkTheme = {
 	colors: {
 		primary: '#FC4349',
 		secondary: '#6DBCDB',
-		powderWhite: '#FFFFFF',
-		wolfGray: '#D7DADB',
+		altLight: '#888888',
+		altDark: '#444444',
 		onyx: '#36313D',
-		bg: '#020202',
+		bg: {
+			main: '#020202',
+			secondary: '#FEFEFE',
+		},
+		disabled: '#36313D',
+		title: '#FFFFFF',
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {

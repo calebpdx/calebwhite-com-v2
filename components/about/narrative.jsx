@@ -4,7 +4,7 @@ import theme from '../../themes/_darkTheme'
 
 const Nar = styled.div`
 	p {
-		color: ${({ theme }) => theme.colors.bg};
+		color: ${({ theme }) => theme.colors.altDark};
 	}
 `
 

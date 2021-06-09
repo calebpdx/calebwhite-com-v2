@@ -9,11 +9,12 @@ import ProfileContents from './about/profile'
 import Narrative from './about/narrative'
 
 const Wrapper = styled.div`
-	background-color: ${({ theme }) => theme.colors.powderWhite};
+	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	border-top: 0.5em solid ${({ theme }) => theme.colors.primary};
+	transition: all 0.25s linear;
 `
 
 const Container = styled.main`

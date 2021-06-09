@@ -29,10 +29,10 @@ const Container = styled.div`
 	flex-direction: flex-column;
 	justify-content: center;
 	align-items: flex-end;
-	height: 50px;
+	height: 1.25em;
 
 	.downArrow {
-		color: ${({ theme }) => theme.colors.powderWhite};
+		color: ${({ theme }) => theme.colors.title};
 	}
 
 	${respondAt.sm`
