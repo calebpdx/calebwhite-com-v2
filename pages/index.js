@@ -13,6 +13,8 @@ import Banner from '../components/_helpers/banner'
 import PageWrapper from '../components/_helpers/pageWrapper'
 import About from '../components/about'
 import CV from '../components/cv'
+import TechStack from '../components/stack'
+import Projects from '../components/projects'
 import Footer from '../components/footer'
 import Arrow from '../components/hero/arrow'
 
@@ -94,6 +96,8 @@ export default function Home() {
 					</Landing>
 					<About />
 					<CV />
+					<TechStack />
+					<Projects />
 					<Footer />
 				</PageWrapper>
 			</ThemeProvider>
