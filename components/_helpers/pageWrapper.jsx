@@ -11,14 +11,6 @@ const Wrapper = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	transition: all 0.25s linear;
-
-	.headroom-wrapper {
-		width: 100%;
-	}
-
-	.headroom--pinned {
-		border-bottom: 0.2rem solid ${({ theme }) => theme.colors.bg.card};
-	}
 `
 const ContentWrapper = ({ children }) => {
 	return <Wrapper>{children}</Wrapper>

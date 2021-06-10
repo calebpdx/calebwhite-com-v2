@@ -4,6 +4,7 @@ import { respondAt } from '../utils/_respondAt'
 const GlobalStyles = createGlobalStyle`
 
   body {
+	min-height: 100vh;
     background-color: ${({ theme }) => theme.colors.bg.main};
   	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
     font-weight: 300;
@@ -11,6 +12,11 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 	transition: all 0.25s linear;
+	min-height: -webkit-fill-available;
+  }
+
+  html {
+	  height: -webkit-fill-available;
   }
 
   h2 {
@@ -48,6 +54,15 @@ const GlobalStyles = createGlobalStyle`
 		color: ${({ theme }) => theme.colors.altLight};
 		line-height: 1.5;
 		
+	}
+
+	/* CSS Additions for the Headroom */
+	.headroom-wrapper {
+		width: 100%;
+	}
+
+	.headroom--pinned {
+		/* border-bottom: 0.2rem solid ${({ theme }) => theme.colors.bg.card}; */
 	}
 `
 
