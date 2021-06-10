@@ -105,7 +105,7 @@ const TechStack = () => {
 	return (
 		<Wrapper>
 			<Container>
-				<Title>Technology & Programming</Title>
+				<Title>Languages and Tools</Title>
 				<TechUsed>
 					<FontAwesomeIcon icon={faReact} size='5x' />
 					<FontAwesomeIcon icon={faJsSquare} size='5x' />
@@ -120,11 +120,10 @@ const TechStack = () => {
 				</TechUsed>
 				<Desc>
 					<p>
-						I utilize quite a few technologies and programming
-						languages in my day-to-day programming. Here is a sample
-						of what I currently use regularly. This list will be
-						constantly updated as I am strive to continue to build
-						on my skillset.
+						Day-to-day I utilize quite a few tools. Here is a
+						sampling of the tools I currently use regularly. This
+						list will be constantly updated as I am strive to
+						continue to build on my skillset.
 					</p>
 				</Desc>
 				<Methods>

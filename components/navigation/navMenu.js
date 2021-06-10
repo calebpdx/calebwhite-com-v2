@@ -44,10 +44,7 @@ const NavMenu = () => {
 		<Menu>
 			<ul>
 				<li>
-					<a href='/'>about</a>
-				</li>
-				<li>
-					<a href='/'>cv</a>
+					<a href='/'>about/cv</a>
 				</li>
 				<li>
 					<a href='/'>projects</a>

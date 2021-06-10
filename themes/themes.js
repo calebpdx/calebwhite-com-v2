@@ -16,6 +16,11 @@ export const mainTheme = {
 			card: '#e6e6ea',
 		},
 		disabled: '#DDDDDD',
+		buttons: {
+			primary: '#000000',
+			secondary: '#666666',
+			hover: '#FFFFFF',
+		},
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {
@@ -50,6 +55,11 @@ export const darkTheme = {
 			card: '#435055',
 		},
 		disabled: '#3A3B3C',
+		buttons: {
+			primary: '#000000',
+			secondary: '#666666',
+			hover: '#FFFFFF',
+		},
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {

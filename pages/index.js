@@ -4,6 +4,7 @@
 import React from 'react'
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
+import Headroom from 'react-headroom'
 
 // Required Components
 import Logo from '../components/navigation/logo'
@@ -28,11 +29,10 @@ import GlobalStyles from '../themes/globalStyles'
 import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
-	height: 40em;
-	min-height: 100vh;
+	min-height: calc(100vh - 100px);
 	width: 75%;
 	padding: 2rem 0;
-	margin: 4rem;
+
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
@@ -52,14 +52,12 @@ const Landing = styled.section`
 `
 
 const NavBar = styled.nav`
-	position: fixed;
 	display: flex;
+	width: 100%;
+	height: 100px;
 	background-color: ${({ theme }) => theme.colors.bg.main};
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	height: 100px;
-	z-index: 100;
 
 	/* ${respondAt.lg`
 		
@@ -85,17 +83,18 @@ export default function Home() {
 				<GlobalStyles />
 
 				<PageWrapper>
-					<NavBar>
-						<Logo />
-						<NavMenu />
-						<Toggle theme={theme} toggleTheme={toggleTheme} />
-					</NavBar>
+					<Headroom style={{ zIndex: 999 }}>
+						<NavBar>
+							<Logo />
+							<NavMenu />
+							<Toggle theme={theme} toggleTheme={toggleTheme} />
+						</NavBar>
+					</Headroom>
 					<Landing>
 						<Hero />
 						<Arrow />
 					</Landing>
 					<About />
-					<CV />
 					<TechStack />
 					<Projects />
 					<Footer />
