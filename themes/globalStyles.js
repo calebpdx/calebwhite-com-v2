@@ -12,11 +12,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 	transition: all 0.25s linear;
-	min-height: -webkit-fill-available;
-  }
-
-  html {
-	  height: -webkit-fill-available;
   }
 
   h2 {

@@ -29,9 +29,8 @@ import GlobalStyles from '../themes/globalStyles'
 import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
-	min-height: calc(100vh - 100px);
+	min-height: 45rem;
 	width: 75%;
-	padding: 2rem 0;
 
 	display: flex;
 	flex: auto 1;
@@ -43,6 +42,10 @@ const Landing = styled.section`
 	${respondAt.sm`
 		margin: 0;
 		padding: 0;
+	`}
+
+	${respondAt.md`
+		min-height: calc(100vh - 100px);
 	`}
 
 	${respondAt.lg`
@@ -77,6 +80,7 @@ export default function Home() {
 					name='Caleb White'
 					content='A Frontend Engineer from Portland, OR'
 				/>
+
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<ThemeProvider theme={themeMode}>

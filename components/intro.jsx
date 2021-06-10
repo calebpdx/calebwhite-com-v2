@@ -15,13 +15,18 @@ const Intro = styled.main`
 	align-items: flex-start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
 
-	h2 {
-		color: ${({ theme }) => theme.colors.primary};
-	}
-
 	${respondAt.sm`
 		font-size: ${({ theme }) => theme.fontSizes.md};
   	`}
+
+	h2 {
+		color: ${({ theme }) => theme.colors.primary};
+		font-size: ${({ theme }) => theme.fontSizes.sm};
+
+		${respondAt.sm`
+		font-size: ${({ theme }) => theme.fontSizes.lg};
+        `}
+	}
 `
 
 const Para = styled.p`
@@ -46,7 +51,7 @@ const Para = styled.p`
 `
 const SiteTitle = styled.h1`
 	font-family: 'Poppins', sans-serif;
-	font-size: ${({ theme }) => theme.fontSizes.xl};
+	font-size: ${({ theme }) => theme.fontSizes.lg};
 	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
