@@ -15,7 +15,7 @@ const SvgStyle = styled.svg`
 	transition: all 0.25s linear;
 
 	#w-letter {
-		fill: ${({ theme }) => theme.colors.title};
+		fill: ${({ theme }) => theme.colors.text.title};
 		transition: all 0.25s linear;
 	}
 

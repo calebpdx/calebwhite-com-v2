@@ -1,16 +1,21 @@
 export const mainTheme = {
 	colors: {
-		primary: '#6DBCDB',
-		secondary: '#FC4349',
-		altLight: '#36313D',
+		primary: '#Fe4a49',
+		secondary: '#2ab7ca',
+		altLight: '#22303C',
 		altDark: '#CCC',
+		text: {
+			title: '#000000',
+			primary: '#000000',
+			secondary: '#444444',
+		},
 		onyx: '#36313D',
 		bg: {
 			main: '#FEFEFE',
-			secondary: '#000000',
+			secondary: '#F4f4f8',
+			card: '#e6e6ea',
 		},
 		disabled: '#DDDDDD',
-		title: '#000000',
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {
@@ -29,17 +34,22 @@ export const mainTheme = {
 }
 export const darkTheme = {
 	colors: {
-		primary: '#FC4349',
-		secondary: '#6DBCDB',
-		altLight: '#888888',
-		altDark: '#444444',
+		primary: '#66FCF1',
+		secondary: '#2B7A78',
+		altLight: '#8899A6',
+		altDark: '#7f7f7f',
+		text: {
+			title: '#FEFFFF',
+			primary: '#DEF2F1',
+			secondary: '#C5C6C7',
+		},
 		onyx: '#36313D',
 		bg: {
-			main: '#020202',
-			secondary: '#FEFEFE',
+			main: '#121212',
+			secondary: '#27323a',
+			card: '#435055',
 		},
-		disabled: '#36313D',
-		title: '#FFFFFF',
+		disabled: '#3A3B3C',
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {

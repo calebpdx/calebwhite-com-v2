@@ -9,7 +9,7 @@ const ThemeButton = styled.button`
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
-	color: ${({ theme }) => theme.colors.title};
+	color: ${({ theme }) => theme.colors.text.title};
 	margin-right: 1rem;
 	background: none;
 	border: none;

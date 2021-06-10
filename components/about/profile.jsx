@@ -6,9 +6,8 @@ import { respondAt } from '../../utils/_respondAt'
 
 const Profiled = styled.aside`
 	box-sizing: border-box;
-	position: sticky;
 	width: 100%;
-	top: 7rem;
+	top: 8rem;
 
 	.rounded {
 		border-radius: 1em;
@@ -23,6 +22,8 @@ const Profiled = styled.aside`
 		}
 
 		figcaption {
+			color: ${({ theme }) => theme.colors.text.primary};
+			font-weight: 400;
 			text-align: center;
 			padding: 10px;
 		}

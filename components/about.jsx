@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	border-top: 0.5em solid ${({ theme }) => theme.colors.primary};
+	border-top: 0.35em solid ${({ theme }) => theme.colors.bg.card};
 	transition: all 0.25s linear;
 `
 

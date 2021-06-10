@@ -31,7 +31,7 @@ const Container = styled.div`
 	height: 1.25em;
 
 	.downArrow {
-		color: ${({ theme }) => theme.colors.title};
+		color: ${({ theme }) => theme.colors.text.primary};
 	}
 
 	${respondAt.sm`

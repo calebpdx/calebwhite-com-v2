@@ -25,7 +25,7 @@ const Menu = styled.ul`
 	}
 
 	a {
-		color: ${({ theme }) => theme.colors.title};
+		color: ${({ theme }) => theme.colors.text.title};
 		
 		:hover, :focus {
 			color: color: ${({ theme }) => theme.colors.primary};

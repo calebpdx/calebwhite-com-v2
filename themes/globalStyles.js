@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
   h2 {
 	font-weight: 400;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.text.primary};
     padding: 0;
 	margin: 0;
 	text-align: left;
@@ -29,15 +29,15 @@ const GlobalStyles = createGlobalStyle`
 
   a {
 	display: inline-block;
-	line-height: 0.8;
-	color: ${({ theme }) => theme.colors.altLight};
+	line-height: 0.95;
+	color: ${({ theme }) => theme.colors.text.primary};
 	font-weight: 500;
 	text-decoration: none;
 	transition: all 0.25s linear;
 		
 		:hover,
 		:focus {
-			color: ${({ theme }) => theme.colors.secondary};
+			color: ${({ theme }) => theme.colors.primary};
 			border: none;
 		}
 

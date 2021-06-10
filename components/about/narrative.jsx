@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Nar = styled.div`
 	p {
-		color: ${({ theme }) => theme.colors.altDark};
+		color: ${({ theme }) => theme.colors.text.secondary};
 	}
 `
 

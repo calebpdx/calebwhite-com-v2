@@ -14,11 +14,19 @@ const Intro = styled.main`
 	justify-content: center;
 	align-items: flex-start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
+
+	h2 {
+		color: ${({ theme }) => theme.colors.primary};
+	}
+
+	${respondAt.sm`
+		font-size: ${({ theme }) => theme.fontSizes.md};
+  	`}
 `
 
 const Para = styled.p`
 	font-family: 'Noto Sans JP', sans-serif;
-	color: ${({ theme }) => theme.colors.altLight};
+	color: ${({ theme }) => theme.colors.text.secondary};
 	padding: 30px 0;
 	margin: 0;
 	text-align: left;
@@ -26,8 +34,7 @@ const Para = styled.p`
 	line-height: 1.5;
 
 	a {
-		border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
-
+		border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
 		:hover {
 			border: none;
 		}
@@ -43,7 +50,7 @@ const SiteTitle = styled.h1`
 	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
-	color: ${({ theme }) => theme.colors.title};
+	color: ${({ theme }) => theme.colors.text.title};
 
 	strong {
 		font-weight: 600;

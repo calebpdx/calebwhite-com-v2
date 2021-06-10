@@ -30,15 +30,22 @@ const Container = styled.main`
         max-width: 1520px;
 	`};
 `
+
 const Title = styled.h2`
 	order: 1;
 	width: 100%;
 	flex-basis: 0 1;
 	font-weight: 600;
 `
+const Work = styled.section`
+	display: flex;
+	flex-direction: row;
+	order: 2;
+	width: 100%;
+`
 
 const SortJobs = styled.aside`
-	order: 2;
+	order: 1;
 	width: 100%;
 	margin-top: 1.5rem;
 
@@ -49,10 +56,9 @@ const SortJobs = styled.aside`
 	`}
 `
 
-const JobDescriptions = styled.section`
-	order: 3;
+const JobDescriptions = styled.div`
+	order: 2;
 	width: 100%;
-	height: 900px;
 	margin-top: 1.5rem;
 
 	${respondAt.sm`
@@ -67,8 +73,12 @@ const CV = () => {
 		<Wrapper>
 			<Container>
 				<Title>Work Experience</Title>
-				<SortJobs>List Jobs</SortJobs>
-				<JobDescriptions>Job descriptions and sorting</JobDescriptions>
+				<Work>
+					<SortJobs>List Jobs</SortJobs>
+					<JobDescriptions>
+						Job descriptions and sorting
+					</JobDescriptions>
+				</Work>
 			</Container>
 		</Wrapper>
 	)
