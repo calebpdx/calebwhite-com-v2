@@ -19,6 +19,8 @@ import Projects from '../components/projects'
 import Footer from '../components/footer'
 import Arrow from '../components/hero/arrow'
 
+import Navigation from '../components/navigation'
+
 // Utilities Used
 import { respondAt } from '../utils/_respondAt'
 
@@ -57,7 +59,7 @@ const Landing = styled.section`
 const NavBar = styled.nav`
 	display: flex;
 	width: 100%;
-	height: 100px;
+
 	background-color: ${({ theme }) => theme.colors.bg.main};
 	justify-content: space-between;
 	align-items: center;
@@ -87,12 +89,8 @@ export default function Home() {
 				<GlobalStyles />
 
 				<PageWrapper>
-					<Headroom style={{ zIndex: 999 }}>
-						<NavBar>
-							<Logo />
-							<NavMenu />
-							<Toggle theme={theme} toggleTheme={toggleTheme} />
-						</NavBar>
+					<Headroom style={{ zIndex: 998 }}>
+						<Navigation theme={theme} toggleTheme={toggleTheme} />
 					</Headroom>
 					<Landing>
 						<Hero />

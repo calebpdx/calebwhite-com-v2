@@ -4,7 +4,6 @@ import { respondAt } from '../utils/_respondAt'
 const GlobalStyles = createGlobalStyle`
 
   body {
-	min-height: 100vh;
     background-color: ${({ theme }) => theme.colors.bg.main};
   	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
     font-weight: 300;

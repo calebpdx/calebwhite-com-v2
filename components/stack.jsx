@@ -15,6 +15,8 @@ import {
 	faNodeJs,
 	faShopify,
 	faWordpress,
+	faAws,
+	faStripe,
 } from '@fortawesome/free-brands-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 
@@ -46,22 +48,25 @@ const Container = styled.section`
 	`};
 `
 const Title = styled.h2`
+	order: 1;
 	width: 100%;
 	flex-basis: 0 1;
 	font-weight: 600;
+	text-align: center;
 `
 
 const TechUsed = styled.div`
+	order: 3;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	margin-top: 1.5rem;
 	width: 100%;
 
 	svg {
-		color: ${({ theme }) => theme.colors.altLight};
-		min-width: 1.5em;
+		color: ${({ theme }) => theme.colors.text.secondary};
+		min-width: 1.25em;
 		margin: 1rem 0 1rem 1rem;
 
 		&:first-child {
@@ -71,34 +76,31 @@ const TechUsed = styled.div`
 		&:nth-child(7) {
 			margin-left: 0;
 		}
+
+		${respondAt.md`
+			min-width: 1.5em;
+		`}
 	}
 
 	${respondAt.sm`
+		order: 2;
 	    padding: 0 3rem 0 0;
 	    width: calc(70% - 3rem);
 	`}
 `
 const Desc = styled.aside`
+	order: 2;
 	margin-top: 1.5rem;
 	width: 100%;
 
+	p {
+		color: ${({ theme }) => theme.colors.text.secondary};
+	}
+
 	${respondAt.sm`
-	    width: 30%;
+	    order: 3;
+		width: 30%;
 	`}
-`
-
-const Methods = styled.div`
-	display: flex;
-	flex-direction: row;
-	align-content: center;
-	justify-content: center;
-	flex-basis: 0 1;
-	width: 100%;
-	padding: 1em;
-`
-
-const Practices = styled.ul`
-	list-style-type: none;
 `
 
 const TechStack = () => {
@@ -117,6 +119,8 @@ const TechStack = () => {
 					<FontAwesomeIcon icon={faGithub} size='5x' />
 					<FontAwesomeIcon icon={faShopify} size='5x' />
 					<FontAwesomeIcon icon={faWordpress} size='5x' />
+					<FontAwesomeIcon icon={faAws} size='5x' />
+					<FontAwesomeIcon icon={faStripe} size='5x' />
 				</TechUsed>
 				<Desc>
 					<p>
@@ -126,10 +130,6 @@ const TechStack = () => {
 						continue to build on my skillset.
 					</p>
 				</Desc>
-				<Methods>
-					<h3>Coding Theory and Methods</h3>
-					<Practices></Practices>
-				</Methods>
 			</Container>
 		</Wrapper>
 	)

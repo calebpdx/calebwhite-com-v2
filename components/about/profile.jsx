@@ -7,7 +7,7 @@ import { respondAt } from '../../utils/_respondAt'
 const Profiled = styled.aside`
 	box-sizing: border-box;
 	width: 100%;
-	top: 8rem;
+	top: 2rem;
 
 	.rounded {
 		border-radius: 1em;
