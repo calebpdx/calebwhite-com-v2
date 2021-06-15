@@ -31,9 +31,8 @@ import GlobalStyles from '../themes/globalStyles'
 import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
-	min-height: 45rem;
+	min-height: 40rem;
 	width: 75%;
-
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
