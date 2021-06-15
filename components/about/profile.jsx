@@ -68,21 +68,25 @@ const imageDir = [
 		id: 1,
 		src: '/asset_images/caleb-grayscale.jpg',
 		alt: 'Caleb White - Frontend Engineer',
+		blur: 'TqOWvnof~q?bxuM{j[M{M{xuofay',
 	},
 	{
 		id: 2,
 		src: '/asset_images/caleb-1.jpg',
 		alt: 'Beautiful Kaiui Sunset',
+		blur: 'TtHxWZ~V%L^*%2fkIWIWM|RkoJoJ',
 	},
 	{
 		id: 3,
 		src: '/asset_images/caleb_black.jpg',
 		alt: 'Darth Caleb',
+		blur: 'T58z.G%M00004nIU9F_3~q4nt7xu',
 	},
 	{
 		id: 4,
 		src: '/asset_images/caleb.jpg',
 		alt: 'Caleb in Color',
+		blur: 'L#P6z1X9_NMx?bxuRjWBS~MxRPoz',
 	},
 ]
 
@@ -97,9 +101,11 @@ const Profile = () => {
 					<figure className='rounded' key={currentImage.id}>
 						<Image
 							src={currentImage.src}
+							blurDataURL={currentImage.blur}
 							width='fill'
 							height='fill'
 							layout='responsive'
+							placeholder='blur'
 						/>
 
 						<figcaption>{currentImage.alt}</figcaption>
@@ -113,12 +119,14 @@ const Profile = () => {
 						<div key={thumbImg.id} className='img-thumb'>
 							<Image
 								src={thumbImg.src}
+								blurDataURL={thumbImg.blur}
 								width={350}
 								height={350}
 								alt={thumbImg.alt}
 								onClick={() => {
 									setImage(thumbImg.id)
 								}}
+								placeholder='blur'
 							/>
 						</div>
 					))}
