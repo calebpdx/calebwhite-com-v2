@@ -13,18 +13,18 @@ const Intro = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	font-size: ${({ theme }) => theme.fontSizes.sm};
+	font-size: ${({ theme }) => theme.fontSizes.md};
 
 	${respondAt.sm`
-		font-size: ${({ theme }) => theme.fontSizes.md};
+		font-size: ${({ theme }) => theme.fontSizes.lg};
   	`}
 
 	h2 {
 		color: ${({ theme }) => theme.colors.primary};
-		font-size: ${({ theme }) => theme.fontSizes.sm};
+		font-size: ${({ theme }) => theme.fontSizes.md};
 
 		${respondAt.sm`
-		font-size: ${({ theme }) => theme.fontSizes.lg};
+		font-size: ${({ theme }) => theme.fontSizes.xl};
         `}
 	}
 `
@@ -35,7 +35,7 @@ const Para = styled.p`
 	padding: 30px 0;
 	margin: 0;
 	text-align: left;
-	font-size: ${({ theme }) => theme.fontSizes.sm};
+	font-size: ${({ theme }) => theme.fontSizes.md};
 	line-height: 1.5;
 
 	a {
@@ -46,12 +46,12 @@ const Para = styled.p`
 	}
 
 	${respondAt.sm`
-		font-size: ${({ theme }) => theme.fontSizes.md};
+		font-size: ${({ theme }) => theme.fontSizes.lg};
   	`}
 `
 const SiteTitle = styled.h1`
 	font-family: 'Poppins', sans-serif;
-	font-size: ${({ theme }) => theme.fontSizes.lg};
+	font-size: ${({ theme }) => theme.fontSizes.xl};
 	font-weight: 300;
 	padding: 0;
 	margin: 0.65rem 0 0.65rem;
