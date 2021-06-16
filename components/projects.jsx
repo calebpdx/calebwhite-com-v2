@@ -11,7 +11,7 @@ const Wrapper = styled.div`
 	transition: all 0.25s linear;
 `
 
-const Container = styled.main`
+const Container = styled.section`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -66,7 +66,7 @@ const JobDescriptions = styled.div`
 
 const Projects = () => {
 	return (
-		<Wrapper>
+		<Wrapper id='projects'>
 			<Container>
 				<Title>Projects</Title>
 				<Work>

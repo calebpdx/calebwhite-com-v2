@@ -41,21 +41,23 @@ const Menu = styled.div`
 			list-style-type: none;
 			padding-right: 1.25rem;
 
-			
 		`}
 	}
 
 	li {
-		margin-right: 1rem;
-
 		:hover,
 		:focus {
 			color: ${({ theme }) => theme.colors.primary};
 		}
 
-		&:last-child {
-			margin-right: 0;
-		}
+		${respondAt.sm`
+			margin-right: 1rem;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		
+		`}
 	}
 
 	a {
@@ -117,7 +119,6 @@ const Container = styled.div`
 
 const Navigation = (props) => {
 	const theme = useDarkMode()
-	console.log(theme)
 
 	const [menuOpen, setMenuOpen] = useState(false)
 
@@ -134,15 +135,22 @@ const Navigation = (props) => {
 				<Menu className='sitemap'>
 					<ul>
 						<li>
-							<a>
-								<Link href='/about'>about/cv</Link>
-							</a>
+							<Link href='/#about'>
+								<a onClick={() => setMenuOpen('')}>about</a>
+							</Link>
 						</li>
 						<li>
-							<a href='/'>projects</a>
+							<Link href='/#cv'>
+								<a onClick={() => setMenuOpen('')}>cv</a>
+							</Link>
 						</li>
 						<li>
-							<a href='/'>contact</a>
+							<Link href='/#projects'>
+								<a onClick={() => setMenuOpen('')}>projects</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/contact'>contact</Link>
 						</li>
 					</ul>
 					<div className='hamburgerMenu'>

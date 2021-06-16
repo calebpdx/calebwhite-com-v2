@@ -109,28 +109,34 @@ const Footer = () => {
 		<Container>
 			<Copyright>
 				<p>
-					Copyright &copy; <Moment format='YYYY' /> Caleb White. All
-					Rights Reserved.{' '}
+					&copy; <Moment format='YYYY' /> Caleb White. &#10094;{' '}
 					<Link href='/siteinfo'>
-						<a>Site Information</a>
-					</Link>
+						<a>Site Information </a>
+					</Link>{' '}
+					| Privacy &#10095;
 				</p>
 			</Copyright>
-			<Source>
-				<div>source</div>
-				<div>
-					<FontAwesomeIcon icon={faStar} size='sm' className='gh' />{' '}
-					{data.stargazers_count}
-				</div>
-				<div>
-					<FontAwesomeIcon
-						icon={faCodeBranch}
-						size='sm'
-						className='gh'
-					/>{' '}
-					{data.forks_count}
-				</div>
-			</Source>
+			<a href={data.html_url} rel='noreferrer' target='_blank'>
+				<Source>
+					<div>source</div>
+					<div>
+						<FontAwesomeIcon
+							icon={faStar}
+							size='sm'
+							className='gh'
+						/>{' '}
+						{data.stargazers_count}
+					</div>
+					<div>
+						<FontAwesomeIcon
+							icon={faCodeBranch}
+							size='sm'
+							className='gh'
+						/>{' '}
+						{data.forks_count}
+					</div>
+				</Source>
+			</a>
 		</Container>
 	)
 }

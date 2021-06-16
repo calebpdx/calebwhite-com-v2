@@ -63,7 +63,7 @@ const AboutContent = styled.section`
 
 const About = () => {
 	return (
-		<Wrapper>
+		<Wrapper id='about'>
 			<Container>
 				<Title>Who is Caleb?</Title>
 				<AboutContent>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled, { keyframes } from 'styled-components'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -74,15 +75,15 @@ const Arrow = () => {
 	return (
 		<Container>
 			{isVisible && (
-				<a href='#' className='bounce'>
-					<div>
+				<Link href='/#about'>
+					<a className='bounce'>
 						<FontAwesomeIcon
 							icon={faChevronDown}
 							size='2x'
 							className='downArrow'
 						/>
-					</div>
-				</a>
+					</a>
+				</Link>
 			)}
 		</Container>
 	)
