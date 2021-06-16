@@ -19,7 +19,7 @@ const SvgStyle = styled.svg`
 		transition: all 0.25s linear;
 	}
 
-	:hover {
+	&:hover {
 		cursor: pointer;
 		width: 60px;
 		fill: ${({ theme }) => theme.colors.secondary};
