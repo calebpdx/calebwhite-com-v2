@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 import { Divide as Hamburger } from 'hamburger-react'
+import { string, func } from 'prop-types'
 
 //import theme styles
 import { respondAt } from '../utils/_respondAt'
@@ -10,7 +11,6 @@ import Logo from './navigation/logo'
 import Toggle from '../themes/toggleTheme'
 
 import { useDarkMode } from '../themes/useDarkMode'
-import { mainTheme, darkTheme } from '../themes/themes'
 
 const Menu = styled.div`
 	ul {
@@ -116,8 +116,8 @@ const Container = styled.div`
 `
 
 const Navigation = (props) => {
-	const [theme, toggleTheme] = useDarkMode()
-	const themeMode = props.theme === 'mainTheme' ? mainTheme : darkTheme
+	const theme = useDarkMode()
+	console.log(theme)
 
 	const [menuOpen, setMenuOpen] = useState(false)
 
@@ -158,6 +158,11 @@ const Navigation = (props) => {
 			</Container>
 		</NavBar>
 	)
+}
+
+Navigation.propTypes = {
+	theme: string.isRequired,
+	toggleTheme: func.isRequired,
 }
 
 export default Navigation

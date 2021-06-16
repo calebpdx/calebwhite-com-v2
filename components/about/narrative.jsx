@@ -12,9 +12,9 @@ const Narrative = () => {
 	return (
 		<Nar>
 			<p>
-				Hi, I'm Caleb White. Thank you so much for visiting my site, I
-				appreciate you wanting to learn more about me! This site is
-				mainly a representation of my web presence in the tech world,
+				Hi, I&lsquo;m Caleb White. Thank you so much for visiting my
+				site, I appreciate you wanting to learn more about me! This site
+				is mainly a representation of my web presence in the tech world,
 				but I will be sure to throw in some extra tidbits. Et malesuada
 				fames ac turpis. Adipiscing vitae proin sagittis nisl rhoncus
 				mattis rhoncus urna. Scelerisque in dictum non consectetur a

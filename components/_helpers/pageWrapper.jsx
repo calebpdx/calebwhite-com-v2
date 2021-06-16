@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { array } from 'prop-types'
 
 const Wrapper = styled.div`
 	display: flex;
@@ -14,6 +15,10 @@ const Wrapper = styled.div`
 `
 const ContentWrapper = ({ children }) => {
 	return <Wrapper>{children}</Wrapper>
+}
+
+ContentWrapper.propTypes = {
+	children: array.isRequired,
 }
 
 export default ContentWrapper

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
 
@@ -130,15 +130,6 @@ const Profile = () => {
 							/>
 						</div>
 					))}
-				{/* <img
-							key={thumbImg.id}
-							className='img-thumb'
-							src={thumbImg.src}
-							alt={thumbImg.alt}
-							onClick={() => {
-								setImage(thumbImg.id)
-							}}
-						/> */}
 			</Thumbs>
 		</Profiled>
 	)

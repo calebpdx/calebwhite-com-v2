@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react'
 import styled from 'styled-components'
+import { string } from 'prop-types'
 
 // Utilities Used
 import { respondAt } from '../../utils/_respondAt'
@@ -24,6 +25,10 @@ const Container = styled.section`
 
 const Banner = (props) => {
 	return <Container>{props.children}</Container>
+}
+
+Banner.propTypes = {
+	children: string.isRequired,
 }
 
 export default Banner

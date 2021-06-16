@@ -70,11 +70,11 @@ const Hero = () => {
 	return (
 		<Intro>
 			<SiteTitle>
-				Hey, I'm <strong>Caleb</strong>
+				Hey, I&apos;m <strong>Caleb</strong>
 			</SiteTitle>
 			<h2>A Frontend Engineer based in Portland, OR</h2>
 			<Para>
-				I'm passionate about building a better web with exceptional
+				I&apos;m passionate about building a better web with exceptional
 				digital experiences. Currently freelancing as{' '}
 				<a href='https://www.fairwaycreative.com'>Fairway Creative</a>{' '}
 				and open to full-time remote opportunities. You can learn more

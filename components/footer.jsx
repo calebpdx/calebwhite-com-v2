@@ -53,14 +53,25 @@ const Copyright = styled.div`
 	align-items: center;
 	justify-content: center;
 
+	p {
+		font-size: ${({ theme }) => theme.fontSizes.xs};
+	}
+
+	a {
+		font-size: ${({ theme }) => theme.fontSizes.xs};
+		font-weight: 500;
+	}
+
 	${respondAt.lg`
 		justify-content: flex-start;
 	`}
 `
 const Source = styled.button`
 	color: ${({ theme }) => theme.colors.altLight};
-	background-color: ${({ theme }) => theme.colors.buttons.primary};
-	border: 0.15em solid ${({ theme }) => theme.colors.buttons.secondary};
+	/* background-color: ${({ theme }) => theme.colors.buttons.primary}; */
+	/* border: 0.15em solid ${({ theme }) => theme.colors.buttons.secondary}; */
+	border: none;
+	background: none;
 	border-radius: 0.35em;
 	display: flex;
 	flex-direction: row;
@@ -74,8 +85,8 @@ const Source = styled.button`
 
 	&:hover {
 		color: ${({ theme }) => theme.colors.buttons.hover};
-		background-color: ${({ theme }) => theme.colors.buttons.hoverbg};
-		border-color: ${({ theme }) => theme.colors.buttons.hover};
+		/* background-color: ${({ theme }) => theme.colors.buttons.hoverbg};
+		border: 0.15em solid ${({ theme }) => theme.colors.buttons.hover}; */
 	}
 
 	div {

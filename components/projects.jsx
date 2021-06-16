@@ -3,10 +3,6 @@ import styled from 'styled-components'
 
 import { respondAt } from '../utils/_respondAt'
 
-// About Page Parts
-import ProfileContents from './about/profile'
-import Narrative from './about/narrative'
-
 const Wrapper = styled.div`
 	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	width: 100%;

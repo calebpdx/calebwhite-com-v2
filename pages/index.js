@@ -7,13 +7,9 @@ import styled, { ThemeProvider } from 'styled-components'
 import Headroom from 'react-headroom'
 
 // Required Components
-import Logo from '../components/navigation/logo'
-import NavMenu from '../components/navigation/navMenu'
 import Hero from '../components/intro'
-import Banner from '../components/_helpers/banner'
 import PageWrapper from '../components/_helpers/pageWrapper'
 import About from '../components/about'
-import CV from '../components/cv'
 import TechStack from '../components/stack'
 import Projects from '../components/projects'
 import Footer from '../components/footer'
@@ -28,7 +24,6 @@ import { respondAt } from '../utils/_respondAt'
 import { useDarkMode } from '../themes/useDarkMode'
 import { mainTheme, darkTheme } from '../themes/themes'
 import GlobalStyles from '../themes/globalStyles'
-import Toggle from '../themes/toggleTheme'
 
 const Landing = styled.section`
 	min-height: 40rem;
@@ -54,21 +49,6 @@ const Landing = styled.section`
 		max-width: 1520px;
   	`}
 `
-
-const NavBar = styled.nav`
-	display: flex;
-	width: 100%;
-
-	background-color: ${({ theme }) => theme.colors.bg.main};
-	justify-content: space-between;
-	align-items: center;
-
-	/* ${respondAt.lg`
-		
-		background-color: transparent;
-	`} */
-`
-
 export default function Home() {
 	const [theme, toggleTheme] = useDarkMode()
 	const themeMode = theme === 'mainTheme' ? mainTheme : darkTheme
