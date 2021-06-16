@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import styled from 'styled-components'
 import { Divide as Hamburger } from 'hamburger-react'
 
@@ -33,7 +34,7 @@ const Menu = styled.div`
 			padding: 0;
 			height: auto;
 			color: ${({ theme }) => theme.colors.altDark};
-			font-size: ${({ theme }) => theme.fontSizes.sm};
+			font-size: ${({ theme }) => theme.fontSizes.md};
 			font-weight: 600;
 			align-items: center;
 			justify-content: center;
@@ -52,7 +53,7 @@ const Menu = styled.div`
 			color: ${({ theme }) => theme.colors.primary};
 		}
 
-		:last-child {
+		&:last-child {
 			margin-right: 0;
 		}
 	}
@@ -73,8 +74,11 @@ const Menu = styled.div`
 
 	.hamburgerMenu {
 		color: ${({ theme }) => theme.colors.text.title};
-		padding: 0.85rem;
-		margin-right: -0.85rem;
+		transition: all 0.25s ease-in-out;
+
+		&:hover {
+			color: ${({ theme }) => theme.colors.primary};
+		}
 
 		${respondAt.sm`
 		display: none;
@@ -91,15 +95,14 @@ const NavBar = styled.header`
 		display: flex;
 		list-style-type: none;
 
-		li {
-			margin: 0;
-		}
-
 		li > a {
 			font-size: ${({ theme }) => theme.fontSizes.xl};
 			color: ${({ theme }) => theme.colors.primary};
-
 			margin-bottom: 0.5em;
+		}
+
+		li::last-child {
+			margin: 0;
 		}
 	}
 `
@@ -108,7 +111,7 @@ const Container = styled.div`
 	padding: 1.25em 0;
 	width: 100%;
 	background-color: ${({ theme }) => theme.colors.bg.main};
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 `
 
@@ -131,7 +134,9 @@ const Navigation = (props) => {
 				<Menu className='sitemap'>
 					<ul>
 						<li>
-							<a href='/'>about/cv</a>
+							<a>
+								<Link href='/about'>about/cv</Link>
+							</a>
 						</li>
 						<li>
 							<a href='/'>projects</a>
