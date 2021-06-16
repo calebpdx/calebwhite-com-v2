@@ -49,7 +49,7 @@ const Landing = styled.section`
 		max-width: 1520px;
   	`}
 `
-export default function Home() {
+const MainPage = () => {
 	const [theme, toggleTheme] = useDarkMode()
 	const themeMode = theme === 'mainTheme' ? mainTheme : darkTheme
 
@@ -84,3 +84,5 @@ export default function Home() {
 		</>
 	)
 }
+
+export default MainPage

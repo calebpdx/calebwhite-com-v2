@@ -6,8 +6,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import { respondAt } from '../../utils/_respondAt'
 
-const bounce = keyframes`
-	
+const bounce = keyframes`	
 		0%,
 		20%,
 		50%,

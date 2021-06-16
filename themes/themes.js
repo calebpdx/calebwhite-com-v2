@@ -25,7 +25,7 @@ export const mainTheme = {
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
 	fontSizes: {
-		xs: '0.85rem',
+		xs: '0.90rem',
 		sm: '1rem',
 		md: '1.25rem',
 		lg: '1.75rem',

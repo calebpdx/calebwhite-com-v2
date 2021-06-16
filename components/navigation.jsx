@@ -10,8 +10,6 @@ import { respondAt } from '../utils/_respondAt'
 import Logo from './navigation/logo'
 import Toggle from '../themes/toggleTheme'
 
-import { useDarkMode } from '../themes/useDarkMode'
-
 const Menu = styled.div`
 	ul {
 		display: none;
@@ -63,8 +61,11 @@ const Menu = styled.div`
 	a {
 		color: ${({ theme }) => theme.colors.text.title};
 
-		:hover,
-		:focus {
+		&:focus {
+			color: ${({ theme }) => theme.colors.text.title};
+		}
+
+		&:hover {
 			color: ${({ theme }) => theme.colors.primary};
 		}
 	}
@@ -118,8 +119,6 @@ const Container = styled.div`
 `
 
 const Navigation = (props) => {
-	const theme = useDarkMode()
-
 	const [menuOpen, setMenuOpen] = useState(false)
 
 	useEffect(() => {
@@ -140,12 +139,12 @@ const Navigation = (props) => {
 							</Link>
 						</li>
 						<li>
-							<Link href='/#cv'>
+							<Link href='/#cv' passHref>
 								<a onClick={() => setMenuOpen('')}>cv</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/#projects'>
+							<Link href='/#projects' passHref>
 								<a onClick={() => setMenuOpen('')}>projects</a>
 							</Link>
 						</li>
