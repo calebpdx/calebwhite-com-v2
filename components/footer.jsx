@@ -4,8 +4,7 @@ import Link from 'next/link'
 import Moment from 'react-moment'
 import useSWR from 'swr'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faStar, faCodeBranch, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faStar, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 
 import { respondAt } from '../utils/_respondAt'
 
@@ -71,6 +70,13 @@ const Source = styled.button`
 	align-content: center;
 	justify-content: center;
 	padding: 0.25em;
+	cursor: pointer;
+
+	&:hover {
+		color: ${({ theme }) => theme.colors.buttons.hover};
+		background-color: ${({ theme }) => theme.colors.buttons.hoverbg};
+		border-color: ${({ theme }) => theme.colors.buttons.hover};
+	}
 
 	div {
 		padding: 0.25rem;

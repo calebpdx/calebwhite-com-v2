@@ -6,7 +6,7 @@ export const mainTheme = {
 		altDark: '#CCC',
 		text: {
 			title: '#000000',
-			primary: '#000000',
+			primary: '#22303C',
 			secondary: '#444444',
 		},
 		onyx: '#36313D',
@@ -19,7 +19,8 @@ export const mainTheme = {
 		buttons: {
 			primary: '#F4f4f8',
 			secondary: '#e6e6ea',
-			hover: '#FFFFFF',
+			hover: '#Fe4a49',
+			hoverbg: '#FEFEFE',
 		},
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
@@ -59,7 +60,8 @@ export const darkTheme = {
 		buttons: {
 			primary: '#27323a',
 			secondary: '#435055',
-			hover: '#FFFFFF',
+			hover: '#66FCF1',
+			hoverbg: '#2B7A78',
 		},
 	},
 	fonts: ['Noto Sans JP', 'Helvetica', 'sans-serif', 'Roboto'],
