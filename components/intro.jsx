@@ -77,8 +77,8 @@ const Hero = () => {
 				I&apos;m passionate about building a better web with exceptional
 				digital experiences. Currently freelancing as{' '}
 				<a href='https://www.fairwaycreative.com'>Fairway Creative</a>{' '}
-				and open to full-time remote opportunities. You can learn more
-				about my current skills, view cv, and more below.
+				and open to full-time opportunities. You can learn more about my
+				skills, view cv, and more below.
 			</Para>
 			<Socials />
 		</Intro>
