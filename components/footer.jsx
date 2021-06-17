@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
-import Moment from 'react-moment'
+import { getYear } from 'date-fns'
 import useSWR from 'swr'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
@@ -109,7 +109,7 @@ const Footer = () => {
 		<Container>
 			<Copyright>
 				<p>
-					&copy; <Moment format='YYYY' /> Caleb White. &#10094;{' '}
+					&copy; {getYear(new Date())} Caleb White. &#10094;{' '}
 					<Link href='/siteinfo'>
 						<a>Site Information </a>
 					</Link>{' '}
