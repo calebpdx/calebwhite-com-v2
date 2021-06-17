@@ -10,6 +10,7 @@ import Headroom from 'react-headroom'
 import Hero from '../components/intro'
 import PageWrapper from '../components/_helpers/pageWrapper'
 import About from '../components/about'
+import Experience from '../components/cv'
 import TechStack from '../components/stack'
 import Projects from '../components/projects'
 import Footer from '../components/footer'
@@ -76,6 +77,7 @@ const MainPage = () => {
 						<Arrow />
 					</Landing>
 					<About />
+					<Experience />
 					<TechStack />
 					<Projects />
 					<Footer />
