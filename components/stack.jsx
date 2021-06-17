@@ -18,12 +18,12 @@ import {
 import { respondAt } from '../utils/_respondAt'
 
 const Wrapper = styled.div`
-	background-color: ${({ theme }) => theme.colors.bg.main};
+	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	color: ${({ theme }) => theme.colors.text.primary};
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	border-top: 0.15em solid ${({ theme }) => theme.colors.secondary};
+	border-top: 0.15em solid ${({ theme }) => theme.colors.bg.secondary};
 	border-bottom: 0.15em solid ${({ theme }) => theme.colors.bg.card};
 	transition: all 0.25s linear;
 `
@@ -44,6 +44,7 @@ const Container = styled.section`
 	`};
 `
 const Title = styled.h2`
+	color: ${({ theme }) => theme.colors.text.title};
 	width: 100%;
 	flex-basis: 0 1;
 	font-weight: 600;
@@ -60,8 +61,8 @@ const TechUsed = styled.div`
 	width: 100%;
 
 	svg {
-		color: ${({ theme }) => theme.colors.text.secondary};
-		fill: ${({ theme }) => theme.colors.text.secondary};
+		color: ${({ theme }) => theme.colors.text.primary};
+		fill: ${({ theme }) => theme.colors.text.primary};
 		font-size: 3rem;
 		min-width: 1.25em;
 		height: auto;
