@@ -7,24 +7,24 @@ import styled, { ThemeProvider } from 'styled-components'
 import Headroom from 'react-headroom'
 
 // Required Components
-import Hero from '../components/intro'
-import PageWrapper from '../components/_helpers/pageWrapper'
-import About from '../components/about'
-import Experience from '../components/cv'
-import TechStack from '../components/stack'
-import Projects from '../components/projects'
-import Footer from '../components/footer'
-import Arrow from '../components/hero/arrow'
+import Hero from '@components/intro'
+import PageWrapper from '@components/_helpers/pageWrapper'
+import About from '@components/about'
+import Experience from '@components/cv'
+import TechStack from '@components/stack'
+import Projects from '@components/projects'
+import Footer from '@components/footer'
+import Arrow from '@components/hero/arrow'
 
-import Navigation from '../components/navigation'
+import Navigation from '@components/navigation'
 
 // Utilities Used
-import { respondAt } from '../utils/_respondAt'
+import { respondAt } from '@utils/_respondAt'
 
 // Theming Components/Utils
-import { useDarkMode } from '../themes/useDarkMode'
-import { mainTheme, darkTheme } from '../themes/themes'
-import GlobalStyles from '../themes/globalStyles'
+import { useDarkMode } from '@themes/useDarkMode'
+import { mainTheme, darkTheme } from '@themes/themes'
+import GlobalStyles from '@themes/globalStyles'
 
 const Landing = styled.section`
 	min-height: 40rem;
