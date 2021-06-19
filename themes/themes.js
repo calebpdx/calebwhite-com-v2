@@ -8,6 +8,7 @@ export const mainTheme = {
 			title: '#000000',
 			primary: '#22303C',
 			secondary: '#444444',
+			dark: '#121212',
 		},
 		onyx: '#36313D',
 		bg: {
@@ -44,11 +45,12 @@ export const darkTheme = {
 		primary: '#66FCF1',
 		secondary: '#2B7A78',
 		altLight: '#8899A6',
-		altDark: '#7f7f7f',
+		altDark: '#4D6373',
 		text: {
 			title: '#FEFFFF',
 			primary: '#DEF2F1',
 			secondary: '#C5C6C7',
+			dark: '#121212',
 		},
 		onyx: '#36313D',
 		bg: {
