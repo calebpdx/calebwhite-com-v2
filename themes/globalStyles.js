@@ -17,16 +17,20 @@ const GlobalStyles = createGlobalStyle`
 	transition: all 0.25s linear;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+	font-family: 'Poppins', sans-serif;
+  }
+
   h2 {
 	font-weight: 400;
     color: ${({ theme }) => theme.colors.text.primary};
     padding: 0;
 	margin: 0;
 	text-align: left;
-	font-size: ${({ theme }) => theme.fontSizes.md};
+	font-size: ${({ theme }) => theme.fontSizes.lg};
 
 	${respondAt.sm`
-      font-size: ${({ theme }) => theme.fontSizes.lg};
+      font-size: ${({ theme }) => theme.fontSizes.xl};
     `}
 
   }
@@ -61,6 +65,10 @@ const GlobalStyles = createGlobalStyle`
 
 	.headroom--pinned {
 		/* border-bottom: 0.2rem solid ${({ theme }) => theme.colors.bg.card}; */
+	}
+
+	::selection {
+		color: ${({ theme }) => theme.colors.primary};
 	}
 `
 
