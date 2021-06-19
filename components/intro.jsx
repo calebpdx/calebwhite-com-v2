@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Socials from './_helpers/socials'
+import Socials from '@components/_helpers/socials'
 
-import { respondAt } from '../utils/_respondAt'
+import { respondAt } from '@utils/_respondAt'
 
 const Intro = styled.main`
 	width: 100%;
@@ -70,7 +70,7 @@ const Hero = () => {
 	return (
 		<Intro>
 			<SiteTitle>
-				Hey, I&apos;m <strong>Caleb</strong>
+				Hey, I&apos;m <strong>Caleb</strong>.
 			</SiteTitle>
 			<h2>A Frontend Engineer based in Portland, OR</h2>
 			<Para>

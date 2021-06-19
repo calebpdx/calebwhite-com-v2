@@ -6,7 +6,7 @@ import useSWR from 'swr'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 
-import { respondAt } from '../utils/_respondAt'
+import { respondAt } from '@utils/_respondAt'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
@@ -113,7 +113,11 @@ const Footer = () => {
 					<Link href='/siteinfo'>
 						<a>Site Information </a>
 					</Link>{' '}
-					| Privacy &#10095;
+					|{' '}
+					<Link href='/privacy'>
+						<a>Privacy </a>
+					</Link>{' '}
+					&#10095;
 				</p>
 			</Copyright>
 			<a href={data.html_url} rel='noreferrer' target='_blank'>

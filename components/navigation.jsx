@@ -140,7 +140,9 @@ const Navigation = (props) => {
 						</li>
 						<li>
 							<Link href='/#cv' passHref>
-								<a onClick={() => setMenuOpen('')}>cv</a>
+								<a onClick={() => setMenuOpen('')}>
+									experience
+								</a>
 							</Link>
 						</li>
 						<li>
