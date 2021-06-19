@@ -48,6 +48,12 @@ const Company = styled.p`
 	}
 `
 
+const Tenure = styled.p`
+	margin: 0.25em 0 0.75em;
+	font-size: ${({ theme }) => theme.fontSizes.xs};
+	color: ${({ theme }) => theme.colors.altLight};
+`
+
 export const tenure = (starting, ended) => {
 	if (ended != undefined) {
 		let actualTenure = formatDistanceStrict(
@@ -77,15 +83,15 @@ const DescBox = ({ description, start, end, title, company, website }) => {
 					@{company}
 				</a>
 			</Company>
-			<p>
-				{format(new Date(start), 'MMMM yyyy')} -{' '}
+			<Tenure>
+				{format(new Date(start), 'MMM yyyy')} -{' '}
 				{end != undefined
-					? format(new Date(end), 'MMMM yyyy')
+					? format(new Date(end), 'MMM yyyy')
 					: 'Present'}{' '}
 				{'( '}
 				{tenure(start, end)}
 				{' )'}
-			</p>
+			</Tenure>
 
 			<BulletPoints>
 				{description.map((value) => {
