@@ -16,23 +16,25 @@ const Wrapper = styled.section`
 	color: ${({ theme }) => theme.colors.text.primary};
 	width: 100%;
 	display: flex;
+	flex-flow: column nowrap;
 	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
 	border-top: 0.15em solid ${({ theme }) => theme.colors.bg.main};
 	border-bottom: 0.15em solid ${({ theme }) => theme.colors.bg.card};
 	transition: all 0.25s linear;
 `
 const Container = styled.div`
 	display: flex;
-	/* flex-direction: column; */
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
 	width: 80%;
-	margin: 3rem 0;
+	margin: 0 0 2rem;
 
-	${respondAt.lg`
+	${respondAt.sm`
     	flex-direction: row;
-		width: 60%;
+		width: 80%;
         max-width: 1100px;
 	`};
 `
@@ -46,8 +48,8 @@ const JobList = styled.aside`
 	${respondAt.sm`
         border: none;
     	border-right: 0.1rem solid ${({ theme }) => theme.colors.primary};
-	    width: calc(30% - (1.1rem + 2px));
-        padding-right: 1rem;
+		width: 30%;
+		padding-right: 1rem;
     `}
 
 	ul {
@@ -103,10 +105,11 @@ const JobList = styled.aside`
 const JobDesc = styled.main`
 	display: flex;
 	flex-grow: 1;
-	width: calc(70%-3rem);
+	width: 100%;
 	margin-top: 1rem;
 
 	${respondAt.sm`
+		width: 70%;
         margin-top: 0;
 	    margin-left: 3rem;
     `}
@@ -117,7 +120,7 @@ const Title = styled.h2`
 	flex-basis: 0 1;
 	font-weight: 600;
 	text-align: center;
-	margin-bottom: 2rem;
+	margin: 2rem;
 `
 
 const Experience = () => {
@@ -130,7 +133,7 @@ const Experience = () => {
 	}
 
 	const fetchEntries = async () => {
-		const entries = await client.getEntries()
+		const entries = await client.getEntries({ content_type: 'jobs' })
 		if (entries.items) return entries.items
 		// eslint-disable-next-line no-undef
 		console.log(`Error getting Entries for ${contentType.name}.`)
@@ -143,7 +146,6 @@ const Experience = () => {
 				.concat(newJobs)
 				.sort((a, b) => (a.fields.jobId > b.fields.jobId ? -1 : 1))
 			setJobs([...allJobs])
-			console.log(allJobs)
 		}
 
 		getJobs()
@@ -151,42 +153,29 @@ const Experience = () => {
 
 	return (
 		<Wrapper id='cv'>
+			<Title>Work Experience</Title>
 			<Container>
-				<Title>Work Experience</Title>
 				<JobList>
 					<ul>
-						{jobs.map((p) => {
-							return (
-								<JobPost
-									selected={
-										currentExp != p.fields.jobId
-											? 'false'
-											: 'true'
-									}
-									key={p.fields.jobId}
-									title={p.fields.jobName}
-									company={p.fields.companyName}
-									handler={() => handleDesc(p.fields.jobId)}
-								/>
-							)
-						})}
+						{jobs.map((job) => (
+							<JobPost
+								key={job.sys.id}
+								job={job}
+								handler={() => handleDesc(job.fields.jobId)}
+								selected={
+									currentExp != job.fields.jobId
+										? 'false'
+										: 'true'
+								}
+							/>
+						))}
 					</ul>
 				</JobList>
 				<JobDesc>
 					{jobs
 						.filter((desc) => desc.fields.jobId == currentExp)
-						.map((p) => {
-							return (
-								<DescBox
-									key={p.fields.jobId}
-									title={p.fields.jobName}
-									company={p.fields.companyName}
-									description={p.fields.description}
-									website={p.fields.companyWebsite}
-									start={p.fields.startDate}
-									end={p.fields.endDate}
-								/>
-							)
+						.map((job) => {
+							return <DescBox key={job.fields.jobId} job={job} />
 						})}
 				</JobDesc>
 			</Container>
