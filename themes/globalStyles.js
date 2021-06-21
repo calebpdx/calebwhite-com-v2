@@ -18,12 +18,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;	
   }
 
   h2 {
 	font-weight: 400;
-    color: ${({ theme }) => theme.colors.text.primary};
+    color: ${({ theme }) => theme.colors.text.title};
     padding: 0;
 	margin: 0;
 	text-align: left;
