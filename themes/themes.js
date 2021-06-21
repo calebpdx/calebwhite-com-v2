@@ -3,14 +3,13 @@ export const mainTheme = {
 		primary: '#Fe4a49',
 		secondary: '#2ab7ca',
 		altLight: '#22303C',
-		altDark: '#CCC',
+		altDark: '#36313D',
 		text: {
 			title: '#000000',
 			primary: '#22303C',
 			secondary: '#444444',
 			dark: '#121212',
 		},
-		onyx: '#36313D',
 		bg: {
 			main: '#FEFEFE',
 			secondary: '#F4f4f8',
@@ -49,10 +48,9 @@ export const darkTheme = {
 		text: {
 			title: '#FEFFFF',
 			primary: '#DEF2F1',
-			secondary: '#C5C6C7',
+			secondary: '#8899A6',
 			dark: '#121212',
 		},
-		onyx: '#36313D',
 		bg: {
 			main: '#121212',
 			secondary: '#27323a',
