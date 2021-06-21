@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { string, func, number } from 'prop-types'
+import { string, func, array } from 'prop-types'
 
 const JobTitle = styled.h4`
 	color: ${({ theme }) => theme.colors.text.secondary};
@@ -13,7 +13,7 @@ const JobTitle = styled.h4`
 	}
 `
 const Company = styled.p`
-	color: ${({ theme }) => theme.colors.altLight};
+	color: ${({ theme }) => theme.colors.altDark};
 	font-size: ${({ theme }) => theme.fontSizes.xs};
 	font-weight: 400;
 	margin: 0;
@@ -24,7 +24,9 @@ const Company = styled.p`
 	}
 `
 
-const JobPost = ({ title, company, handler, selected }) => {
+const JobPost = ({ job, handler, selected }) => {
+	const { jobName: title, companyName: company } = job.fields
+
 	return (
 		<li
 			onClick={handler}
@@ -41,8 +43,7 @@ const JobPost = ({ title, company, handler, selected }) => {
 }
 
 JobPost.propTypes = {
-	title: string.isRequired,
-	company: string.isRequired,
+	job: array.isRequired,
 	handler: func.isRequired,
 	selected: string.isRequired,
 }

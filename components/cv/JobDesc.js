@@ -1,17 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { string, func, number } from 'prop-types'
+import { string, array } from 'prop-types'
 import { format, formatDistanceStrict } from 'date-fns'
 
-import { respondAt } from '@utils/_respondAt'
+// import { respondAt } from '@utils/_respondAt'
 
 const Container = styled.main`
+	display: flex;
+	flex-flow: column nowrap;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 `
 
 const BulletPoints = styled.ul`
+	display: flex;
+	flex-flow: column wrap;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -74,7 +78,16 @@ export const tenure = (starting, ended) => {
 	return actualTenure
 }
 
-const DescBox = ({ description, start, end, title, company, website }) => {
+const DescBox = ({ job }) => {
+	const {
+		jobName: title,
+		companyName: company,
+		description,
+		companyWebsite: website,
+		startDate: start,
+		endDate: end,
+	} = job.fields
+
 	return (
 		<Container>
 			<Position>{title}</Position>
@@ -94,12 +107,22 @@ const DescBox = ({ description, start, end, title, company, website }) => {
 			</Tenure>
 
 			<BulletPoints>
-				{description.map((value) => {
-					return <li>{value}</li>
+				{description.map((value, index) => {
+					return <li key={index}>{value}</li>
 				})}
 			</BulletPoints>
 		</Container>
 	)
+}
+
+DescBox.propTypes = {
+	job: array.isRequired,
+	description: array.isRequired,
+	start: string.isRequired,
+	end: string,
+	title: string.isRequired,
+	company: string.isRequired,
+	website: string,
 }
 
 export default DescBox
