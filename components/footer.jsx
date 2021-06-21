@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
 import { getYear } from 'date-fns'
 import useSWR from 'swr'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -108,17 +107,7 @@ const Footer = () => {
 	return (
 		<Container>
 			<Copyright>
-				<p>
-					&copy; {getYear(new Date())} Caleb White. &#10094;{' '}
-					<Link href='/siteinfo'>
-						<a>Site Information </a>
-					</Link>{' '}
-					|{' '}
-					<Link href='/privacy'>
-						<a>Privacy </a>
-					</Link>{' '}
-					&#10095;
-				</p>
+				<p>Design and coded by Caleb &copy; {getYear(new Date())}.</p>
 			</Copyright>
 			<a href={data.html_url} rel='noreferrer' target='_blank'>
 				<Source>
