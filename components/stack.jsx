@@ -17,7 +17,7 @@ import {
 
 import { respondAt } from '../utils/_respondAt'
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
 	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	color: ${({ theme }) => theme.colors.text.primary};
 	width: 100%;
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
 	transition: all 0.25s linear;
 `
 
-const Container = styled.section`
+const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
