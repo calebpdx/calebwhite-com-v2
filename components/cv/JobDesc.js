@@ -19,10 +19,11 @@ const BulletPoints = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	font-size: ${({ theme }) => theme.fontSizes.md};
 
 	li {
 		margin: 0;
-		padding: 0;
+		padding: 0.25em 0;
 
 		&:before {
 			margin: 0;
@@ -44,6 +45,7 @@ const Position = styled.h3`
 `
 
 const Company = styled.p`
+	font-size: ${({ theme }) => theme.fontSizes.md};
 	margin: 0;
 	padding: 0;
 
@@ -54,7 +56,8 @@ const Company = styled.p`
 
 const Tenure = styled.p`
 	margin: 0.25em 0 0.75em;
-	font-size: ${({ theme }) => theme.fontSizes.xs};
+	font-size: ${({ theme }) => theme.fontSizes.sm};
+	font-weight: 500;
 	color: ${({ theme }) => theme.colors.altLight};
 `
 

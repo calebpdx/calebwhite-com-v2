@@ -17,13 +17,11 @@ const Card = styled.div`
 	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	border: 0.1em solid ${({ theme }) => theme.colors.bg.card};
 	margin-top: 1em;
-	flex-grow: 0;
 	padding: 1em;
 	width: 100%;
-	flex-grow: 0;
 
 	${respondAt.sm`
-        min-height: 250px;
+        min-height: 290px;
         width: 33.3%;
 	    margin: 1em 1em 0 0;
     `}
