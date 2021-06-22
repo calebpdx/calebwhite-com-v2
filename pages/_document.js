@@ -39,11 +39,6 @@ export default class MyDocument extends Document {
 						data-domain='calebwhite.com'
 						src='https://plausible.io/js/plausible.js'
 					></script>
-					<script
-						dangerouslySetInnerHTML={{
-							__html: 'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
-						}}
-					/>
 				</Head>
 				<body>
 					<Main />
