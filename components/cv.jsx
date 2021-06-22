@@ -128,8 +128,9 @@ const Experience = () => {
 	const [jobs, setJobs] = useState([])
 
 	//Update the state of Job Description field with the currently selected tab
-	const handleDesc = (key) => {
-		setCurrentExp(key)
+	const handleDesc = async (key) => {
+		await setCurrentExp(key)
+		window.plausible(key)
 	}
 
 	const fetchEntries = async () => {
