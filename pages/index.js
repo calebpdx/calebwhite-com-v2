@@ -58,10 +58,6 @@ const MainPage = () => {
 		<>
 			<Head>
 				<title>Caleb White - Frontend Engineer - Portland, OR</title>
-				<description>
-					Frontend engineer with a focus on creating exceptional
-					digital experiences.
-				</description>
 				<meta
 					name='Caleb White'
 					content='A Frontend Engineer from Portland, OR'
