@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
+import { DefaultSeo } from 'next-seo'
+
+import SEO from '../next.config'
 
 import normalize from 'normalize.css/normalize.css'
 import '../styles/_fontStyles.css'
@@ -16,6 +19,7 @@ export default function App({ Component, pageProps }) {
 
 	return (
 		<>
+			<DefaultSeo {...SEO} />
 			<Component {...pageProps} />
 		</>
 	)
