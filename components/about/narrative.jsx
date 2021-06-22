@@ -8,7 +8,7 @@ const Nar = styled.div`
 		font-size: ${({ theme }) => theme.fontSizes.md};
 
 		${respondAt.sm`
-			font-size: ${({ theme }) => theme.fontSizes.lg};
+			font-size: ${({ theme }) => theme.fontSizes.md};
 		`}
 	}
 `
