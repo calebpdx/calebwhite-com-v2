@@ -11,7 +11,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 
 function getRepo() {
 	const { data, error } = useSWR(
-		'https://api.github.com/repos/calebpdx/calebpdx',
+		'https://api.github.com/repos/calebpdx/calebwhite-com-v2',
 		fetcher
 	)
 
