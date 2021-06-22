@@ -6,7 +6,7 @@ import { respondAt } from '@utils/_respondAt'
 
 const Intro = styled.main`
 	width: 100%;
-	max-width: 100%
+	max-width: 100%;
 	padding: 0;
 	display: flex;
 	flex: auto 1;
