@@ -6,4 +6,6 @@ The second interation of CalebWhite.com. This is also the first version that has
 
 -   Next.js
 -   Styled Components
+-   Contentful
+-   Headroom
 -   FontAwesome / fontawesome-react
