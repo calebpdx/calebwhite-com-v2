@@ -35,7 +35,7 @@ const Container = styled.div`
 	align-content: center;
 	justify-content: center;
 	width: 80%;
-	margin: 3rem 2rem;
+	margin: 2rem;
 
 	${respondAt.sm`
     	flex-direction: row;
@@ -57,7 +57,7 @@ const TechUsed = styled.div`
 	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 	width: 100%;
 
 	svg {
@@ -81,7 +81,7 @@ const TechUsed = styled.div`
 const Desc = styled.p`
 	font-size: ${({ theme }) => theme.fontSizes.md};
 	color: ${({ theme }) => theme.colors.text.secondary};
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 	width: 90%;
 	text-align: center;
 
@@ -100,10 +100,10 @@ const TechStack = () => {
 			<Container>
 				<Title>Languages and Tools</Title>
 				<Desc>
-					Day-to-day I utilize quite a few tools. Here is a sampling
-					of the tools I currently use regularly. This list will be
-					constantly updated as I am strive to continue to build on my
-					skillset.
+					Day-to-day I utilize quite a few tools. Listed below is a
+					sampling of the tools I currently use regularly. This list
+					will be constantly updated as I am strive to continue to
+					build on my skillset.
 				</Desc>
 				<TechUsed>
 					<FontAwesomeIcon icon={faReact} />

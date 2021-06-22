@@ -1,10 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { respondAt } from '@utils/_respondAt'
 
 const Nar = styled.div`
 	p {
 		color: ${({ theme }) => theme.colors.text.secondary};
 		font-size: ${({ theme }) => theme.fontSizes.md};
+
+		${respondAt.sm`
+			font-size: ${({ theme }) => theme.fontSizes.lg};
+		`}
 	}
 `
 
@@ -12,39 +17,26 @@ const Narrative = () => {
 	return (
 		<Nar>
 			<p>
-				Hi, I&lsquo;m Caleb White. Thank you so much for visiting my
-				site, I appreciate you wanting to learn more about me! This site
-				is mainly a representation of my web presence in the tech world,
-				but I will be sure to throw in some extra tidbits. Et malesuada
-				fames ac turpis. Adipiscing vitae proin sagittis nisl rhoncus
-				mattis rhoncus urna. Scelerisque in dictum non consectetur a
-				erat nam at lectus. Et netus et malesuada fames ac turpis. Et
-				netus et malesuada fames ac turpis egestas.
+				Hi, I&lsquo;m Caleb White. I am a frontend engineer living in
+				Portland, OR. I enjoy the challenge of building better user
+				digital experiences, balancing simplicity, functionality and
+				accessibility.
 			</p>
 			<p>
-				Dolor purus non enim praesent elementum facilisis leo vel. In
-				hac habitasse platea dictumst quisque sagittis purus sit amet.
-				Aliquet nec ullamcorper sit amet. Euismod lacinia at quis risus.
-				Duis ultricies lacus sed turpis tincidunt id aliquet risus.
-				Pellentesque habitant morbi tristique senectus et. Curabitur
-				gravida arcu ac tortor dignissim convallis. Accumsan in nisl
-				nisi scelerisque. A lacus vestibulum sed arcu non odio euismod
-				lacinia at. Ac feugiat sed lectus vestibulum.
+				The diversity of my professional experience includes nonprofit
+				program leadership, senior retail leadership, omni-channel
+				retail, and freelancing. I leverage the insights gained from all
+				of these roles, which provides me with a unique perspective on
+				challenges facing businesses today. My primary focus is bringing
+				the in-store retail experience online, and propelling businesses
+				to the next level.
 			</p>
 			<p>
-				Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
-				Molestie nunc non blandit massa enim nec dui. Ultrices sagittis
-				orci a scelerisque purus semper. Pulvinar etiam non quam lacus
-				suspendisse faucibus interdum. Dolor purus non enim praesent
-				elementum facilisis. Velit sed ullamcorper morbi tincidunt
-				ornare. Facilisis mauris sit amet massa. Egestas fringilla
-				phasellus faucibus scelerisque. Nullam vehicula ipsum a arcu
-				cursus vitae. Sed id semper risus in hendrerit gravida rutrum
-				quisque non. Sit amet venenatis urna cursus eget nunc
-				scelerisque viverra. Et magnis dis parturient montes nascetur
-				ridiculus mus mauris vitae. Orci sagittis eu volutpat odio
-				facilisis mauris.
+				I follow atomic design principles for creating DRY components in
+				my projects. Thus creating lean, reusable, and scalable code. I
+				currently focus on Next.js/React and headless e-commerce.
 			</p>
+			<p>I am available for full-time and freelance work.</p>
 		</Nar>
 	)
 }

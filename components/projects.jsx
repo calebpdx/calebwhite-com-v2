@@ -78,10 +78,10 @@ const Projects = () => {
 		async function getProjects() {
 			const newProjects = await fetchEntries()
 
-			// Sort projects descending
+			// Sort the results
 			const allProjects = []
 				.concat(newProjects)
-				.sort((a, b) => (a.fields.title > b.fields.title ? -1 : 1))
+				.sort((a, b) => (a.fields.title > b.fields.title ? 1 : -1))
 
 			setProjects([...allProjects])
 		}

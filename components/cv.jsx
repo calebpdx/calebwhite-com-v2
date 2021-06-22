@@ -39,7 +39,7 @@ const Container = styled.div`
 	`};
 `
 
-const JobList = styled.aside`
+const JobList = styled.div`
 	display: flex;
 	width: 100%;
 	border: 0.1rem solid ${({ theme }) => theme.colors.primary};
@@ -102,7 +102,7 @@ const JobList = styled.aside`
 		}
 	}
 `
-const JobDesc = styled.main`
+const JobDesc = styled.article`
 	display: flex;
 	flex-grow: 1;
 	width: 100%;

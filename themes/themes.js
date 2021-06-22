@@ -17,7 +17,7 @@ export const mainTheme = {
 		},
 		disabled: '#DDDDDD',
 		buttons: {
-			primary: '#F4f4f8',
+			primary: '#e6e6ea',
 			secondary: '#e6e6ea',
 			hover: '#Fe4a49',
 			hoverbg: '#FEFEFE',
@@ -58,8 +58,8 @@ export const darkTheme = {
 		},
 		disabled: '#3A3B3C',
 		buttons: {
-			primary: '#27323a',
-			secondary: '#435055',
+			primary: '#121212',
+			secondary: '#8899A6',
 			hover: '#66FCF1',
 			hoverbg: '#2B7A78',
 		},

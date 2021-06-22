@@ -151,7 +151,7 @@ const Navigation = (props) => {
 							</Link>
 						</li>
 						<li>
-							<Link href='/contact'>contact</Link>
+							<Link href='#contact'>contact</Link>
 						</li>
 					</ul>
 					<div className='hamburgerMenu'>

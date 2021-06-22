@@ -13,6 +13,7 @@ import About from '@components/about'
 import Experience from '@components/cv'
 import TechStack from '@components/stack'
 import Projects from '@components/projects'
+import Contact from '@components/contact'
 import Footer from '@components/footer'
 import Arrow from '@components/hero/arrow'
 
@@ -80,6 +81,7 @@ const MainPage = () => {
 					<Experience />
 					<TechStack />
 					<Projects />
+					<Contact />
 					<Footer />
 				</PageWrapper>
 			</ThemeProvider>
