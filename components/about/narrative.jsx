@@ -7,8 +7,9 @@ const Nar = styled.div`
 		color: ${({ theme }) => theme.colors.text.secondary};
 		font-size: ${({ theme }) => theme.fontSizes.md};
 
-		${respondAt.sm`
-			font-size: ${({ theme }) => theme.fontSizes.md};
+		${respondAt.lg`
+			font-size: ${({ theme }) => theme.fontSizes.lg};
+
 		`}
 	}
 `

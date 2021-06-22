@@ -32,6 +32,7 @@ const Landing = styled.section`
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
+	-webkit-flex-direction: column;
 	justify-content: center;
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};

@@ -8,6 +8,7 @@ import ProfileContents from './about/profile'
 import Narrative from './about/narrative'
 
 const Wrapper = styled.div`
+	margin: auto;
 	background-color: ${({ theme }) => theme.colors.bg.secondary};
 	width: 100%;
 	display: flex;

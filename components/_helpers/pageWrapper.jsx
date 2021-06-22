@@ -4,12 +4,14 @@ import { array } from 'prop-types'
 
 const Wrapper = styled.div`
 	display: flex;
-	height: 100vh;
+	flex: 0 0 100%;
+	margin: auto;
+	height: 100%;
 	width: 100%;
 	background-color: ${({ theme }) => theme.colors.bg.main};
 	color: ${({ theme }) => theme.colors.secondary};
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: justify-center;
 	align-items: center;
 	transition: all 0.25s linear;
 `

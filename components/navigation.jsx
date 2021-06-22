@@ -91,7 +91,6 @@ const Menu = styled.div`
 
 const NavBar = styled.header`
 	background-color: ${({ theme }) => theme.colors.bg.main};
-	z-index: 999;
 
 	.open .sitemap ul {
 		background-color: ${({ theme }) => theme.colors.bg.main};

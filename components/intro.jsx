@@ -6,8 +6,8 @@ import { respondAt } from '@utils/_respondAt'
 
 const Intro = styled.main`
 	width: 100%;
+	max-width: 100%
 	padding: 0;
-	margin: 0;
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
@@ -74,8 +74,8 @@ const Hero = () => {
 			</SiteTitle>
 			<h2>A Frontend Engineer based in Portland, OR</h2>
 			<Para>
-				I&apos;m passionate about building exceptional
-				digital experiences. Currently freelancing as{' '}
+				I&apos;m passionate about building exceptional digital
+				experiences. Currently freelancing as{' '}
 				<a href='https://www.fairwaycreative.com'>Fairway Creative</a>{' '}
 				and open to full-time opportunities.
 			</Para>
