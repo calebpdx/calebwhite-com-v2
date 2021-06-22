@@ -134,7 +134,7 @@ const Navigation = (props) => {
 				<Menu className='sitemap'>
 					<ul>
 						<li>
-							<Link href='/#about'>
+							<Link href='/#about' passHref>
 								<a onClick={() => setMenuOpen('')}>about</a>
 							</Link>
 						</li>
@@ -151,7 +151,9 @@ const Navigation = (props) => {
 							</Link>
 						</li>
 						<li>
-							<Link href='#contact'>contact</Link>
+							<Link href='/#contact' passHref>
+								<a onClick={() => setMenuOpen('')}>contact</a>
+							</Link>
 						</li>
 					</ul>
 					<div className='hamburgerMenu'>
