@@ -69,7 +69,7 @@ const MainPage = () => {
 			<ThemeProvider theme={themeMode}>
 				<GlobalStyles />
 
-				<PageWrapper>
+				<PageWrapper id='top'>
 					<Headroom style={{ zIndex: 998 }}>
 						<Navigation theme={theme} toggleTheme={toggleTheme} />
 					</Headroom>
