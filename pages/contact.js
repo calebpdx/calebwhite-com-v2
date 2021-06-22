@@ -68,7 +68,7 @@ export default function Home() {
 					<Headroom style={{ zIndex: 998 }}>
 						<Navigation theme={theme} toggleTheme={toggleTheme} />
 					</Headroom>
-					<Title>Privacy Policy</Title>
+					<Title>Contact</Title>
 					<Container>
 						<Privacy>Hello World!</Privacy>
 					</Container>
