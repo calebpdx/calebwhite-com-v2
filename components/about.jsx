@@ -32,12 +32,6 @@ const Container = styled.main`
         max-width: 1520px;
 	`};
 `
-// const Title = styled.h2`
-// 	order: 1;
-// 	width: 100%;
-// 	flex-basis: 0 1;
-// 	font-weight: 600;
-// `
 
 const Profile = styled.aside`
 	order: 2;

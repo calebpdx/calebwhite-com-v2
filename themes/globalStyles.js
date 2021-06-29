@@ -5,10 +5,11 @@ const GlobalStyles = createGlobalStyle`
 
   html {
 	scroll-behavior: smooth;
+    background-color: ${({ theme }) => theme.colors.bg.main};
+
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.bg.main};
   	font-family:'Noto Sans JP', Helvetica, Arial, sans-serif;
     font-weight: 300;
     margin: 0;

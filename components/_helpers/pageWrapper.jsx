@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 	background-color: ${({ theme }) => theme.colors.bg.main};
 	color: ${({ theme }) => theme.colors.secondary};
 	flex-direction: column;
-	justify-content: justify-center;
+	justify-content: center;
 	align-items: center;
 	transition: all 0.25s linear;
 
