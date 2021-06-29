@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
-// Dependencies
 import React from 'react'
 import Head from 'next/head'
 import styled, { ThemeProvider } from 'styled-components'
@@ -32,7 +29,6 @@ const Landing = styled.section`
 	display: flex;
 	flex: auto 1;
 	flex-direction: column;
-	-webkit-flex-direction: column;
 	justify-content: center;
 	align-items: start;
 	font-size: ${({ theme }) => theme.fontSizes.sm};
@@ -63,8 +59,6 @@ const MainPage = () => {
 					name='Caleb White'
 					content='A Frontend Engineer from Portland, OR'
 				/>
-
-				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<ThemeProvider theme={themeMode}>
 				<GlobalStyles />
