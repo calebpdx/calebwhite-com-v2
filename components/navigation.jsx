@@ -117,6 +117,16 @@ const Container = styled.div`
 	align-items: center;
 `
 
+const HamburgerMenu = styled.div`
+	color: ${({ theme }) => theme.colors.text.title};
+	padding: 0.85rem;
+	margin-right: -0.85rem;
+
+	${respondAt.sm`
+		display: none;
+	`}
+`
+
 const Navigation = (props) => {
 	const [menuOpen, setMenuOpen] = useState(false)
 
@@ -155,14 +165,15 @@ const Navigation = (props) => {
 							</Link>
 						</li>
 					</ul>
-					<div className='hamburgerMenu'>
+
+					<HamburgerMenu>
 						<Hamburger
 							size={25}
 							toggled={menuOpen}
 							toggle={(open) => setMenuOpen(open)}
 							label='Show menu'
 						/>
-					</div>
+					</HamburgerMenu>
 				</Menu>
 				<Toggle theme={props.theme} toggleTheme={props.toggleTheme} />
 			</Container>

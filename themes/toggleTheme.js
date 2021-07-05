@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { func, string } from 'prop-types'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,6 +15,7 @@ const ThemeButton = styled.button`
 	border: none;
 	cursor: pointer;
 	transition: all 0.25s linear;
+	z-index: 2;
 
 	:hover {
 		color: ${({ theme }) => theme.colors.primary};

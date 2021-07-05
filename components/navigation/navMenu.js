@@ -54,7 +54,7 @@ const Menu = styled.div`
 		transition: all 0.75s ease-in-out;
 	}
 
-	.hamburgerMenu {
+	/* .hamburgerMenu {
 		color: ${({ theme }) => theme.colors.text.title};
 		padding: 0.85rem;
 		margin-right: -0.85rem;
@@ -62,7 +62,17 @@ const Menu = styled.div`
 		${respondAt.sm`
 		display: none;
 	`}
-	}
+	} */
+`
+
+const HamburgerMenu = styled.div`
+	color: ${({ theme }) => theme.colors.text.title};
+	padding: 0.85rem;
+	margin-right: -0.85rem;
+
+	${respondAt.sm`
+		display: none;
+	`}
 `
 
 const NavMenu = () => {
@@ -88,14 +98,14 @@ const NavMenu = () => {
 				</li>
 			</ul>
 
-			<div className='hamburgerMenu'>
+			<HamburgerMenu>
 				<Hamburger
 					size={25}
 					toggled={menuOpen}
 					toggle={(open) => setMenuOpen(open)}
 					label='Show menu'
 				/>
-			</div>
+			</HamburgerMenu>
 		</Menu>
 	)
 }

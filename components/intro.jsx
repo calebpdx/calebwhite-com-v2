@@ -77,8 +77,22 @@ const Hero = () => {
 			<Para>
 				I&apos;m passionate about building exceptional digital
 				experiences. Currently freelancing as{' '}
-				<a href='https://www.fairwaycreative.com'>Fairway Creative</a>{' '}
-				and open to full-time opportunities.
+				<a
+					href='https://www.fairwaycreative.com'
+					target='_blank'
+					rel='noreferrer'
+				>
+					Fairway Creative
+				</a>{' '}
+				and building{' '}
+				<a
+					href='https://www.donationretriever.com'
+					target='_blank'
+					rel='noreferrer'
+				>
+					Donation Retriever
+				</a>{' '}
+				. I&apos;m open to full-time opportunities.
 			</Para>
 			<Socials />
 		</Intro>
