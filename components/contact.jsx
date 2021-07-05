@@ -125,7 +125,7 @@ const Contact = () => {
 					</ConButton>
 					<ConButton>
 						<a
-							href='https:/www.twitter.com/goldfinger'
+							href='https://www.twitter.com/goldfinger'
 							target='_blank'
 							rel='noreferrer'
 						>
