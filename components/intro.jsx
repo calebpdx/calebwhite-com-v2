@@ -76,23 +76,14 @@ const Hero = () => {
 			<h2>A Frontend Engineer based in Portland, OR</h2>
 			<Para>
 				I&apos;m passionate about building exceptional digital
-				experiences. Currently freelancing as{' '}
+				experiences. Currently a web developer at {' '}
 				<a
-					href='https://www.fairwaycreative.com'
+					href='https://www.theprogrampdx.com'
 					target='_blank'
 					rel='noreferrer'
 				>
-					Fairway Creative
-				</a>{' '}
-				and building{' '}
-				<a
-					href='https://www.donationretriever.com'
-					target='_blank'
-					rel='noreferrer'
-				>
-					Donation Retriever
-				</a>{' '}
-				. I&apos;m open to full-time opportunities.
+					The Program
+				</a>. I am open to select freelance projects and opportunities.
 			</Para>
 			<Socials />
 		</Intro>
