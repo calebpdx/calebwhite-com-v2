@@ -19,6 +19,7 @@ const Card = styled.div`
 	margin-top: 1em;
 	padding: 1em;
 	width: 100%;
+	min-width: 275px;
 
 	${respondAt.sm`
         min-height: 290px;

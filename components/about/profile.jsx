@@ -98,8 +98,8 @@ const Profile = () => {
 					<figure className='rounded' key={currentImage.id}>
 						<Image
 							src={currentImage.src}
-							width='fill'
-							height='fill'
+							width={300}
+							height={300}
 							layout='responsive'
 						/>
 

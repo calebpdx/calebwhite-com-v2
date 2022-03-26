@@ -47,10 +47,13 @@ const Title = styled.h2`
 `
 
 const ProjectList = styled.div`
-	display: flex;
+	/* display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	flex-flow: column wrap; */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 1em;
 	width: 100%;
 
 	${respondAt.sm`
