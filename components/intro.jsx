@@ -76,14 +76,18 @@ const Hero = () => {
 			<h2>A Frontend Engineer based in Portland, OR</h2>
 			<Para>
 				I&apos;m passionate about building exceptional digital
-				experiences. Currently a web developer at {' '}
+				experiences. Currently a Partner and Frontend Engineer at {' '}
 				<a
-					href='https://www.theprogrampdx.com'
+					href='https://www.unicornpowered.xyz'
 					target='_blank'
 					rel='noreferrer'
 				>
-					The Program
-				</a>. I am open to select freelance projects and opportunities.
+					Unicorn Powered
+				</a> and a Frontend Developer with 				<a
+					href='https://www.westcoastnft.com/'
+					target='_blank'
+					rel='noreferrer'
+				>West Coast NFTs</a>. I am open to select freelance projects and opportunities.
 			</Para>
 			<Socials />
 		</Intro>
