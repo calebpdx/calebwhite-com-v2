@@ -73,7 +73,7 @@ const Hero = () => {
 			<SiteTitle>
 				Hey, I&apos;m <strong>Caleb</strong>.
 			</SiteTitle>
-			<h2>A Full Stack Software Engineer based in Portland, OR</h2>
+			<h2>A software engineer based in Portland, OR</h2>
 			<Para>
 				I&apos;m passionate about building exceptional digital
 				experiences. Currently, I work as a Full Stack Software Engineer at {' '}
