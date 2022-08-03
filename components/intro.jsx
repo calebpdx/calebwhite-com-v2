@@ -76,7 +76,7 @@ const Hero = () => {
 			<h2>A Full Stack Software Engineer based in Portland, OR</h2>
 			<Para>
 				I&apos;m passionate about building exceptional digital
-				experiences. Currently Full Stack Software Engineer at {' '}
+				experiences. Currently, I work as a Full Stack Software Engineer at {' '}
 				<a
 					href='https://www.deptagency.com/en-us/'
 					target='_blank'
@@ -91,7 +91,7 @@ const Hero = () => {
 					href='https://www.unicornpowered.xyz/'
 					target='_blank'
 					rel='noreferrer'
-				>Unicorn Powered</a>. Currently, I am not available freelance projects and opportunities.
+				>Unicorn Powered</a>. 
 			</Para>
 			<Socials />
 		</Intro>
