@@ -73,10 +73,10 @@ const Hero = () => {
 			<SiteTitle>
 				Hey, I&apos;m <strong>Caleb</strong>.
 			</SiteTitle>
-			<h2>A Frontend Engineer based in Portland, OR</h2>
+			<h2>A Full Stack Software Engineer based in Portland, OR</h2>
 			<Para>
 				I&apos;m passionate about building exceptional digital
-				experiences. Currently full-stack Software Engineer at {' '}
+				experiences. Currently Full Stack Software Engineer at {' '}
 				<a
 					href='https://www.deptagency.com/en-us/'
 					target='_blank'
